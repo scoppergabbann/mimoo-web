@@ -1,0 +1,238 @@
+{
+  "Meta": {
+    "title": "Mimoo — Your identity, your belongings, their way home",
+    "description": "Mimoo helps you protect what matters. Attach it to anything. If it's found, we'll help bring it back to you."
+  },
+  "Nav": {
+    "home": "Home",
+    "howItWorks": "How it works",
+    "products": "Products",
+    "forCards": "For Cards",
+    "pricing": "Pricing",
+    "about": "About us",
+    "login": "Log in",
+    "getStarted": "Get Started",
+    "new": "New"
+  },
+  "Hero": {
+    "badge": "Meet Mimoo!",
+    "titlePart1": "Your identity,",
+    "titlePart2": "your belongings,",
+    "titlePart3": "their way home",
+    "subtitle": "Mimoo helps you protect what matters. Attach it to anything. If it's found, we'll help bring it back to you.",
+    "createMimoo": "Create Your Mimoo",
+    "howItWorks": "How It Works",
+    "trustText": "2,500+ users",
+    "trustSubtext": "trust Mimoo to protect their belongings ✨",
+    "floatingCard1Title": "Works on Anything",
+    "floatingCard1Desc": "ID card, wallet, keys, bag, laptop, and more.",
+    "floatingCard2Title": "Found? We Notify You",
+    "floatingCard2Desc": "Get an instant alert when someone scans your Mimoo.",
+    "floatingCard3Title": "Privacy First",
+    "floatingCard3Desc": "Your information is safe and only shared when needed.",
+    "worksFor": "Works perfectly for:",
+    "worksForKtp": "ID Card",
+    "worksForSim": "Driver's License",
+    "worksForKtm": "Student ID",
+    "worksForKantor": "Office Card",
+    "worksForAtm": "Debit Card",
+    "worksForMore": "And more!"
+  },
+  "HowItWorks": {
+    "badge": "Simple Steps",
+    "title": "How Mimoo works",
+    "subtitle": "Easy for you. Easy for others. Better for everyone.",
+    "step1Title": "Create Your Mimoo",
+    "step1Desc": "Pick a style and create your unique identity.",
+    "step2Title": "Attach the Tag",
+    "step2Desc": "Put your Mimoo tag on your important items.",
+    "step3Title": "Someone Scans",
+    "step3Desc": "If your item is found, they scan the QR code.",
+    "step4Title": "You Get Notified",
+    "step4Desc": "You'll receive a message safely and privately.",
+    "step5Title": "Reunited 💜",
+    "step5Desc": "Your item comes back where it belongs."
+  },
+  "Features": {
+    "title": "Why Mimoo?",
+    "subtitle": "Not just a tracker. It's an ecosystem of care.",
+    "scan": {
+      "title": "Scan",
+      "desc": "Anyone can scan to help return your item."
+    },
+    "connect": {
+      "title": "Connect",
+      "desc": "We connect them with your info (safely)."
+    },
+    "return": {
+      "title": "Return",
+      "desc": "Your item finds its way back to you."
+    },
+    "private": {
+      "title": "Private & Secure",
+      "desc": "We only share what's needed, when it's needed."
+    }
+  },
+  "Avatars": {
+    "badge": "Made in Indonesia 🇮🇩",
+    "title": "Pick Your Mimoo",
+    "subtitle": "From Sabang to Merauke, everyone has a story. Pick a character that's totally you.",
+    "characters": {
+      "denpa": {
+        "name": "Denpa",
+        "origin": "Denpasar, Bali",
+        "vibe": "Cheerful & spiritual"
+      },
+      "jaya": {
+        "name": "Jaya",
+        "origin": "Jayapura, Papua",
+        "vibe": "Free & authentic"
+      },
+      "salma": {
+        "name": "Salma",
+        "origin": "Bandung",
+        "vibe": "Soft & elegant"
+      },
+      "kupa": {
+        "name": "Kupa",
+        "origin": "Kupang, NTT",
+        "vibe": "Calm & warm"
+      },
+      "comingSoon": "Coming soon"
+    },
+    "exploreAll": "View all characters"
+  },
+  "ProductShowcase": {
+    "badge": "Mimoo Card",
+    "title": "Slim card that fits perfectly in your wallet",
+    "subtitle": "Simple. Elegant. Powerful. Mimoo Card is designed to fit in your wallet or card holder.",
+    "shopNow": "Shop Now",
+    "feature1": "Waterproof & durable",
+    "feature2": "Long-lasting QR code",
+    "feature3": "Customizable to your taste"
+  },
+  "AppPreview": {
+    "title": "Mimoo App",
+    "subtitle": "Everyday peace of mind",
+    "feature1": "Manage your items and cards easily",
+    "feature2": "Get notified if someone scans",
+    "feature3": "Customize your Mimoo identity",
+    "feature4": "All in one simple and cozy app",
+    "comingSoon": "Coming soon"
+  },
+  "CTA": {
+    "title": "Because losing something shouldn't mean losing hope.",
+    "subtitle": "Start protecting what matters today.",
+    "button": "Create Your Mimoo Now"
+  },
+  "Footer": {
+    "tagline": "Your identity, your belongings, their way home.",
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "links": {
+      "howItWorks": "How it works",
+      "products": "Products",
+      "pricing": "Pricing",
+      "shop": "Shop",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "help": "Help Center",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
+    "madeWith": "Made with",
+    "by": "by the Mimoo team in Indonesia",
+    "rights": "All rights reserved."
+  },
+  "HowItWorksPage": {
+    "title": "How Mimoo Works",
+    "subtitle": "Three simple steps: Scan → Connect → Return.",
+    "section1Title": "How it all started",
+    "section1Desc": "Mimoo was born from a simple question: why does losing something have to feel so heartbreaking? We believe technology should ease our worries, not add to them.",
+    "ownerJourneyTitle": "For Owners",
+    "finderJourneyTitle": "For Finders",
+    "finderStep1": "See a Mimoo tag on a found item",
+    "finderStep2": "Scan the QR — no app install, no signup needed",
+    "finderStep3": "Send a brief message through an anonymous form",
+    "finderStep4": "Wait for the owner's response to coordinate return"
+  },
+  "ProductsPage": {
+    "title": "Pick Your Mimoo",
+    "subtitle": "Tag, card, or sticker. All with one mission: bringing your stuff home.",
+    "card": {
+      "name": "Mimoo Card",
+      "desc": "Slim card for wallets & card holders.",
+      "price": "From Rp 49,000"
+    },
+    "tag": {
+      "name": "Mimoo Tag",
+      "desc": "Cute keychain for bags & keys.",
+      "price": "From Rp 39,000"
+    },
+    "sticker": {
+      "name": "Mimoo Sticker",
+      "desc": "Waterproof sticker for laptops, bottles, etc.",
+      "price": "From Rp 19,000"
+    },
+    "buyNow": "Buy Now"
+  },
+  "PricingPage": {
+    "title": "Simple pricing",
+    "subtitle": "Start free. Upgrade when you need more.",
+    "free": {
+      "name": "Mimoo Free",
+      "price": "Rp 0",
+      "period": "forever",
+      "desc": "For anyone just starting out",
+      "features": [
+        "Up to 3 registered items",
+        "Basic QR Recovery Page",
+        "Unlimited finder messages",
+        "1 basic Mimoo character"
+      ]
+    },
+    "premium": {
+      "name": "Mimoo Premium",
+      "price": "Rp 39,000",
+      "period": "per month",
+      "desc": "For those who want more",
+      "features": [
+        "Unlimited items",
+        "All Indonesian characters 🇮🇩",
+        "Lost Mode with rewards",
+        "Priority notifications",
+        "Custom Recovery Page",
+        "Premium badge"
+      ],
+      "popular": "Most Popular"
+    },
+    "choosePlan": "Choose Plan"
+  },
+  "AboutPage": {
+    "title": "The Mimoo Story",
+    "subtitle": "Because losing something shouldn't mean losing hope.",
+    "story": "Mimoo was born in Indonesia, for Indonesia. We believe the best technology feels like a warm hug — safe, comfortable, and not intimidating.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "Turning the experience of losing things into stories of empathetic reunion.",
+    "valuesTitle": "Our Values",
+    "value1Title": "Cozy-Tech",
+    "value1Desc": "Technology that's warm, not cold.",
+    "value2Title": "Privacy First",
+    "value2Desc": "Your data, your control. Always.",
+    "value3Title": "Made for Indonesia",
+    "value3Desc": "Designed with love for our cultural richness."
+  },
+  "Common": {
+    "loading": "Loading...",
+    "comingSoon": "Coming Soon",
+    "learnMore": "Learn more",
+    "back": "Back",
+    "close": "Close",
+    "skipToContent": "Skip to main content"
+  }
+}

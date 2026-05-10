@@ -1,0 +1,238 @@
+{
+  "Meta": {
+    "title": "Mimoo — Identitasmu, barangmu, jalannya pulang",
+    "description": "Mimoo membantu melindungi yang berharga. Tempel di apa saja. Kalau hilang, kami bantu kembalikan."
+  },
+  "Nav": {
+    "home": "Beranda",
+    "howItWorks": "Cara Kerja",
+    "products": "Produk",
+    "forCards": "Untuk Kartu",
+    "pricing": "Harga",
+    "about": "Tentang",
+    "login": "Masuk",
+    "getStarted": "Mulai Sekarang",
+    "new": "Baru"
+  },
+  "Hero": {
+    "badge": "Halo, Mimoo!",
+    "titlePart1": "Identitasmu,",
+    "titlePart2": "barangmu,",
+    "titlePart3": "jalannya pulang",
+    "subtitle": "Mimoo bantu lindungi yang berharga. Tempel di apa saja. Kalau hilang, kami bantu kembalikan ke tanganmu.",
+    "createMimoo": "Buat Mimoo-mu",
+    "howItWorks": "Cara Kerjanya",
+    "trustText": "2.500+ pengguna",
+    "trustSubtext": "percaya pada Mimoo untuk melindungi barangnya ✨",
+    "floatingCard1Title": "Cocok untuk Apa Saja",
+    "floatingCard1Desc": "KTP, dompet, kunci, tas, laptop, dan lainnya.",
+    "floatingCard2Title": "Ditemukan? Kami Kasih Tahu",
+    "floatingCard2Desc": "Notifikasi instan saat ada yang scan Mimoo-mu.",
+    "floatingCard3Title": "Privasi Utama",
+    "floatingCard3Desc": "Data pribadimu aman, hanya dibagikan saat dibutuhkan.",
+    "worksFor": "Cocok banget untuk:",
+    "worksForKtp": "KTP",
+    "worksForSim": "SIM A/B/C",
+    "worksForKtm": "KTM",
+    "worksForKantor": "Kartu Kantor",
+    "worksForAtm": "ATM / Debit",
+    "worksForMore": "Dan lainnya!"
+  },
+  "HowItWorks": {
+    "badge": "Langkah Mudah",
+    "title": "Cara Mimoo bekerja",
+    "subtitle": "Mudah untukmu. Mudah untuk orang lain. Lebih baik untuk semua.",
+    "step1Title": "Buat Mimoo-mu",
+    "step1Desc": "Pilih gaya dan buat identitas unikmu sendiri.",
+    "step2Title": "Tempel Tag",
+    "step2Desc": "Pasang tag Mimoo di barang-barang pentingmu.",
+    "step3Title": "Ada yang Scan",
+    "step3Desc": "Kalau barangmu ditemukan, mereka tinggal scan QR.",
+    "step4Title": "Kamu Dapat Notifikasi",
+    "step4Desc": "Pesan akan sampai ke kamu dengan aman dan privat.",
+    "step5Title": "Reunited 💜",
+    "step5Desc": "Barangmu kembali ke tempatnya, ke pelukan pemiliknya."
+  },
+  "Features": {
+    "title": "Kenapa Mimoo?",
+    "subtitle": "Bukan sekadar tracker. Ini ekosistem kepedulian.",
+    "scan": {
+      "title": "Scan",
+      "desc": "Siapa pun bisa scan untuk membantu mengembalikan barangmu."
+    },
+    "connect": {
+      "title": "Connect",
+      "desc": "Kami hubungkan mereka denganmu (dengan aman)."
+    },
+    "return": {
+      "title": "Return",
+      "desc": "Barangmu menemukan jalannya pulang."
+    },
+    "private": {
+      "title": "Private & Secure",
+      "desc": "Kami hanya bagikan yang perlu, saat kamu butuhkan."
+    }
+  },
+  "Avatars": {
+    "badge": "Made in Indonesia 🇮🇩",
+    "title": "Pilih Mimoo-mu",
+    "subtitle": "Dari Sabang sampai Merauke, semua punya cerita. Pilih karakter yang paling kamu banget.",
+    "characters": {
+      "denpa": {
+        "name": "Denpa",
+        "origin": "Denpasar, Bali",
+        "vibe": "Ceria & spiritual"
+      },
+      "jaya": {
+        "name": "Jaya",
+        "origin": "Jayapura, Papua",
+        "vibe": "Bebas & autentik"
+      },
+      "salma": {
+        "name": "Salma",
+        "origin": "Bandung",
+        "vibe": "Lembut & elegan"
+      },
+      "kupa": {
+        "name": "Kupa",
+        "origin": "Kupang, NTT",
+        "vibe": "Tenang & hangat"
+      },
+      "comingSoon": "Segera hadir"
+    },
+    "exploreAll": "Lihat semua karakter"
+  },
+  "ProductShowcase": {
+    "badge": "Mimoo Card",
+    "title": "Slim card yang pas di dompetmu",
+    "subtitle": "Simple. Elegan. Powerful. Kartu Mimoo dirancang untuk pas di dompet atau card holder kamu.",
+    "shopNow": "Pesan Sekarang",
+    "feature1": "Tahan air & bandel",
+    "feature2": "QR yang awet, nggak luntur",
+    "feature3": "Custom sesuai selera"
+  },
+  "AppPreview": {
+    "title": "Mimoo App",
+    "subtitle": "Ketenangan setiap hari",
+    "feature1": "Kelola barang & kartumu dengan mudah",
+    "feature2": "Notifikasi saat ada yang scan",
+    "feature3": "Atur identitas Mimoo sesuai selera",
+    "feature4": "Semua dalam satu app yang nyaman",
+    "comingSoon": "Segera hadir"
+  },
+  "CTA": {
+    "title": "Karena kehilangan tidak harus berarti kehilangan harapan.",
+    "subtitle": "Mulai lindungi yang berharga hari ini.",
+    "button": "Buat Mimoo-mu Sekarang"
+  },
+  "Footer": {
+    "tagline": "Identitasmu, barangmu, jalannya pulang.",
+    "product": "Produk",
+    "company": "Perusahaan",
+    "support": "Bantuan",
+    "legal": "Legal",
+    "links": {
+      "howItWorks": "Cara Kerja",
+      "products": "Produk",
+      "pricing": "Harga",
+      "shop": "Toko",
+      "about": "Tentang Kami",
+      "blog": "Blog",
+      "careers": "Karir",
+      "contact": "Kontak",
+      "help": "Pusat Bantuan",
+      "faq": "FAQ",
+      "privacy": "Kebijakan Privasi",
+      "terms": "Syarat & Ketentuan"
+    },
+    "madeWith": "Dibuat dengan",
+    "by": "oleh tim Mimoo di Indonesia",
+    "rights": "Hak cipta dilindungi."
+  },
+  "HowItWorksPage": {
+    "title": "Cara Kerja Mimoo",
+    "subtitle": "Tiga langkah sederhana: Scan → Connect → Return.",
+    "section1Title": "Bagaimana semuanya bermula",
+    "section1Desc": "Mimoo lahir dari satu pertanyaan sederhana: kenapa kehilangan barang harus terasa begitu menyesakkan? Kami percaya teknologi seharusnya hadir untuk meredakan, bukan menambah, kekhawatiran kita.",
+    "ownerJourneyTitle": "Untuk Pemilik",
+    "finderJourneyTitle": "Untuk Penemu",
+    "finderStep1": "Lihat tag Mimoo pada barang yang ditemukan",
+    "finderStep2": "Scan QR — tidak perlu install app, tidak perlu daftar",
+    "finderStep3": "Kirim pesan singkat lewat form anonim",
+    "finderStep4": "Tunggu respons dari pemilik untuk koordinasi pengembalian"
+  },
+  "ProductsPage": {
+    "title": "Pilih Mimoo-mu",
+    "subtitle": "Tag, kartu, atau stiker. Semua punya satu misi: membawa barangmu pulang.",
+    "card": {
+      "name": "Mimoo Card",
+      "desc": "Slim card untuk dompet & card holder.",
+      "price": "Mulai Rp 49.000"
+    },
+    "tag": {
+      "name": "Mimoo Tag",
+      "desc": "Keychain gemoy untuk tas & kunci.",
+      "price": "Mulai Rp 39.000"
+    },
+    "sticker": {
+      "name": "Mimoo Sticker",
+      "desc": "Stiker tahan air untuk laptop, botol, dll.",
+      "price": "Mulai Rp 19.000"
+    },
+    "buyNow": "Beli Sekarang"
+  },
+  "PricingPage": {
+    "title": "Harga sederhana",
+    "subtitle": "Mulai gratis. Upgrade kalau butuh fitur lebih.",
+    "free": {
+      "name": "Mimoo Free",
+      "price": "Rp 0",
+      "period": "selamanya",
+      "desc": "Untuk siapa saja yang baru mulai",
+      "features": [
+        "Sampai 3 item terdaftar",
+        "QR Recovery Page dasar",
+        "Pesan finder tanpa batas",
+        "1 karakter Mimoo dasar"
+      ]
+    },
+    "premium": {
+      "name": "Mimoo Premium",
+      "price": "Rp 39.000",
+      "period": "per bulan",
+      "desc": "Untuk yang ingin lebih",
+      "features": [
+        "Item tak terbatas",
+        "Semua karakter Indonesia 🇮🇩",
+        "Lost Mode dengan reward",
+        "Priority notifications",
+        "Recovery Page custom",
+        "Premium badge"
+      ],
+      "popular": "Paling Populer"
+    },
+    "choosePlan": "Pilih Paket"
+  },
+  "AboutPage": {
+    "title": "Cerita Mimoo",
+    "subtitle": "Karena kehilangan tidak harus berarti kehilangan harapan.",
+    "story": "Mimoo lahir di Indonesia, untuk Indonesia. Kami percaya teknologi terbaik adalah yang terasa seperti pelukan hangat — aman, nyaman, dan tidak menakutkan.",
+    "missionTitle": "Misi Kami",
+    "missionDesc": "Mengubah pengalaman kehilangan barang menjadi cerita pertemuan kembali yang penuh empati.",
+    "valuesTitle": "Nilai Kami",
+    "value1Title": "Cozy-Tech",
+    "value1Desc": "Teknologi yang hangat, bukan dingin.",
+    "value2Title": "Privacy First",
+    "value2Desc": "Datamu, kontrolmu. Selalu.",
+    "value3Title": "Made for Indonesia",
+    "value3Desc": "Dirancang dengan cinta untuk kekayaan budaya kita."
+  },
+  "Common": {
+    "loading": "Memuat...",
+    "comingSoon": "Segera Hadir",
+    "learnMore": "Pelajari lebih lanjut",
+    "back": "Kembali",
+    "close": "Tutup",
+    "skipToContent": "Lewati ke konten utama"
+  }
+}
