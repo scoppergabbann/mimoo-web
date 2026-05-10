@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale, getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import { routing } from '@/i18n/config';
@@ -73,11 +73,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const t = await getTranslations('Common');
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className={`${plusJakarta.variable} ${inter.variable}`}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
           <a href="#main-content" className="skip-to-content">
             {t('skipToContent')}
           </a>
