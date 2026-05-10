@@ -1,12 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { CTA } from '@/components/sections/CTA';
 import { MimooBlob } from '@/lib/avatar/MimooBlob';
 import { MimooAvatar } from '@/lib/avatar/MimooAvatar';
 
-export default function AboutPage() {
-  const t = useTranslations('AboutPage');
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations('AboutPage');
 
   const values = [
     { titleKey: 'value1Title' as const, descKey: 'value1Desc' as const, emoji: '🤗' },

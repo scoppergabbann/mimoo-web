@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
-import { locales, type Locale } from '@/i18n/config';
+import { routing } from '@/i18n/config';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import '../globals.css';
@@ -14,6 +14,8 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
   variable: '--font-display',
   weight: ['400', '500', '600', '700', '800'],
+  fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: false,
 });
 
 const inter = Inter({
@@ -21,17 +23,20 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-body',
   weight: ['400', '500', '600', '700'],
+  fallback: ['system-ui', 'sans-serif'],
+  adjustFontFallback: false,
 });
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: {
@@ -39,50 +44,40 @@ export async function generateMetadata({
       template: '%s · Mimoo',
     },
     description: t('description'),
-    keywords: ['Mimoo', 'lost and found', 'Indonesia', 'QR code', 'lost mode', 'recovery'],
-    authors: [{ name: 'Mimoo Team' }],
-    creator: 'Mimoo',
+    keywords: ['Mimoo', 'lost and found', 'Indonesia', 'QR code'],
     metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
-    alternates: {
-      canonical: '/',
-      languages: {
-        id: '/',
-        en: '/en',
-      },
-    },
     openGraph: {
       title: t('title'),
       description: t('description'),
       type: 'website',
       locale: locale === 'id' ? 'id_ID' : 'en_US',
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-    },
-    icons: {
-      icon: '/favicon.ico',
-    },
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  if (!locales.includes(locale as Locale)) notFound();
+  const { locale } = await params;
 
-  const messages = await getMessages();
-  const t = await getTranslations({ locale, namespace: 'Common' });
+  // Validate locale
+  if (!(routing.locales as readonly string[]).includes(locale)) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = await getTranslations('Common');
 
   return (
     <html lang={locale} className={`${plusJakarta.variable} ${inter.variable}`}>
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <a href="#main-content" className="skip-to-content">
             {t('skipToContent')}
           </a>

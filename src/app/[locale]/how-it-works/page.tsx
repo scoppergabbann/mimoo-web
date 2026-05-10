@@ -1,12 +1,18 @@
-import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
 import { CTA } from '@/components/sections/CTA';
 import { Badge } from '@/components/ui/Badge';
 import { MimooBlob } from '@/lib/avatar/MimooBlob';
-import { CheckIcon } from '@/components/ui/Icons';
 
-export default function HowItWorksPage() {
-  const t = useTranslations('HowItWorksPage');
+export default async function HowItWorksPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations('HowItWorksPage');
 
   const finderSteps = [
     t('finderStep1'),

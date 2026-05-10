@@ -116,15 +116,16 @@ mimoo-web/
 │   │   ├── crypto.ts          # Encryption utilities
 │   │   └── utils.ts           # cn() classname helper
 │   │
-│   └── i18n/
-│       ├── config.ts          # Locales config
-│       ├── request.ts         # next-intl server config
-│       ├── navigation.ts      # i18n-aware Link, useRouter
-│       └── messages/
-│           ├── id.json        # 🇮🇩 Indonesian (default)
-│           └── en.json        # 🇬🇧 English
+│   ├── i18n/
+│   │   ├── config.ts          # defineRouting + locale config
+│   │   ├── request.ts         # next-intl server config (requestLocale)
+│   │   ├── navigation.ts      # i18n-aware Link, useRouter (createNavigation)
+│   │   └── messages/
+│   │       ├── id.json        # 🇮🇩 Indonesian (default)
+│   │       └── en.json        # 🇬🇧 English
+│   │
+│   └── middleware.ts          # ⚠️ HARUS di src/, BUKAN root!
 │
-├── middleware.ts              # i18n routing middleware
 ├── next.config.js
 ├── tailwind.config.ts
 ├── tsconfig.json
@@ -158,14 +159,16 @@ Phase 1 dilengkapi dengan **4 karakter polished** + **8 placeholder** yang siap 
 
 ## 🌐 i18n Routing
 
-Default locale: `id` (Bahasa Indonesia, no prefix needed).
+Default locale: `id` (Bahasa Indonesia). Pakai `localePrefix: 'always'` untuk routing yang reliable.
 
-| URL | Locale |
-|-----|--------|
-| `/` | Indonesian |
-| `/how-it-works` | Indonesian |
-| `/en` | English |
-| `/en/how-it-works` | English |
+| URL | Behavior |
+|-----|----------|
+| `/` | → Auto-redirect ke `/id` |
+| `/id` | ✅ Landing (Indonesian) |
+| `/id/how-it-works` | ✅ Cara Kerja (ID) |
+| `/en` | ✅ Landing (English) |
+| `/en/how-it-works` | ✅ How It Works (EN) |
+| `/about` | → Auto-redirect ke `/id/about` |
 
 ---
 

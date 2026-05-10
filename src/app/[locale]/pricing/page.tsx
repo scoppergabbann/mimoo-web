@@ -1,12 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { CheckIcon } from '@/components/ui/Icons';
 import { cn } from '@/lib/utils';
 
-export default function PricingPage() {
-  const t = useTranslations('PricingPage');
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations('PricingPage');
 
   const freeFeatures = t.raw('free.features') as string[];
   const premiumFeatures = t.raw('premium.features') as string[];

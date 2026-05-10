@@ -1,13 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { CTA } from '@/components/sections/CTA';
 import { ArrowRightIcon, QrCodeIcon } from '@/components/ui/Icons';
-import { MimooAvatar } from '@/lib/avatar/MimooAvatar';
 
-export default function ProductsPage() {
-  const t = useTranslations('ProductsPage');
+export default async function ProductsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations('ProductsPage');
 
   const products = [
     {

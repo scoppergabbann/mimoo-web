@@ -1,5 +1,5 @@
-import { createSharedPathnamesNavigation } from 'next-intl/navigation';
-import { locales } from './config';
+import { createNavigation } from 'next-intl/navigation';
+import { routing } from './config';
 
-export const { Link, redirect, usePathname, useRouter } =
-  createSharedPathnamesNavigation({ locales });
+export const { Link, redirect, usePathname, useRouter, getPathname } =
+  createNavigation(routing);
