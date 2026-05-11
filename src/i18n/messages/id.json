@@ -11,6 +11,9 @@
     "pricing": "Harga",
     "about": "Tentang",
     "login": "Masuk",
+    "register": "Daftar",
+    "dashboard": "Dashboard",
+    "logout": "Keluar",
     "getStarted": "Mulai Sekarang",
     "new": "Baru"
   },
@@ -234,5 +237,92 @@
     "back": "Kembali",
     "close": "Tutup",
     "skipToContent": "Lewati ke konten utama"
+  },
+  "AuthForm": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Konfirmasi Password",
+    "newPassword": "Password Baru",
+    "name": "Nama Lengkap",
+    "namePlaceholder": "Mis. Fawwaz Ananda",
+    "passwordHelper": "Min. 8 karakter, ada huruf besar, kecil, dan angka",
+    "forgotPassword": "Lupa password?",
+    "signIn": "Masuk",
+    "createAccount": "Buat Akun",
+    "nextStep": "Lanjut",
+    "back": "Kembali",
+    "continueWithGoogle": "Lanjutkan dengan Google",
+    "or": "atau",
+    "sendResetLink": "Kirim Link Reset",
+    "resetPasswordCta": "Reset Password",
+    "backToLogin": "Kembali ke Masuk",
+    "agreeTermsPrefix": "Saya setuju dengan",
+    "termsLink": "Syarat & Ketentuan",
+    "privacyLink": "Kebijakan Privasi",
+    "and": "dan",
+    "avatarPicker": {
+      "title": "Pilih Mimoo-mu",
+      "subtitle": "Karakter ini bakal mewakili kamu di Mimoo. Bisa diubah nanti, kok!",
+      "character": "Karakter",
+      "skinTone": "Warna Kulit",
+      "outfit": "Warna Outfit"
+    },
+    "confirmation": {
+      "title": "Cek email kamu! 📬",
+      "subtitle": "Kami sudah kirim link konfirmasi ke {email}. Klik link-nya untuk aktifkan akun kamu.",
+      "helper": "Belum ke-receive? Cek folder spam atau tunggu beberapa menit.",
+      "backToLogin": "Kembali ke Masuk"
+    },
+    "forgotSent": {
+      "title": "Link sudah dikirim! 💌",
+      "subtitle": "Kami sudah kirim link reset password ke {email}. Cek inbox kamu ya!",
+      "helper": "Link berlaku selama 1 jam. Kalau belum ke-receive, cek folder spam."
+    },
+    "resetDone": {
+      "title": "Password berhasil di-reset!",
+      "subtitle": "Mengarahkan kamu ke dashboard..."
+    }
+  },
+  "AuthPages": {
+    "login": {
+      "title": "Selamat datang kembali!",
+      "subtitle": "Yuk masuk ke Mimoo-mu 💜",
+      "noAccount": "Belum punya akun?",
+      "register": "Daftar di sini"
+    },
+    "register": {
+      "title": "Halo, Sahabat Mimoo! 👋",
+      "subtitle": "Buat akun untuk mulai melindungi yang berharga.",
+      "haveAccount": "Sudah punya akun?",
+      "login": "Masuk di sini"
+    },
+    "forgotPassword": {
+      "title": "Lupa password?",
+      "subtitle": "Tenang, kita kirim link untuk reset password ke email kamu.",
+      "back": "Inget passwordnya?",
+      "loginLink": "Masuk lagi"
+    },
+    "resetPassword": {
+      "title": "Bikin password baru",
+      "subtitle": "Pilih password yang kuat ya supaya akun kamu aman."
+    },
+    "authError": {
+      "title": "Wah, ada yang error nih 🥺",
+      "subtitle": "Sepertinya ada masalah saat sign-in. Coba lagi ya!",
+      "tryAgain": "Coba Lagi"
+    }
+  },
+  "Dashboard": {
+    "greeting": "Halo, {name}! 👋",
+    "subtitle": "Selamat datang di Mimoo Dashboard",
+    "comingSoonTitle": "Dashboard segera hadir!",
+    "comingSoonDesc": "Kita masih ngerakit fitur-fitur keren untuk kamu. Stay tuned ya!",
+    "yourMimoo": "Mimoo Kamu",
+    "stats": {
+      "itemsProtected": "Item Terlindungi",
+      "scans": "Total Scan",
+      "reunions": "Berhasil Kembali"
+    },
+    "logout": "Keluar dari Akun"
   }
 }

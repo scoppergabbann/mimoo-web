@@ -11,6 +11,9 @@
     "pricing": "Pricing",
     "about": "About us",
     "login": "Log in",
+    "register": "Sign up",
+    "dashboard": "Dashboard",
+    "logout": "Log out",
     "getStarted": "Get Started",
     "new": "New"
   },
@@ -234,5 +237,92 @@
     "back": "Back",
     "close": "Close",
     "skipToContent": "Skip to main content"
+  },
+  "AuthForm": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "newPassword": "New Password",
+    "name": "Full Name",
+    "namePlaceholder": "e.g. Fawwaz Ananda",
+    "passwordHelper": "Min. 8 chars with uppercase, lowercase, and a number",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "createAccount": "Create Account",
+    "nextStep": "Next",
+    "back": "Back",
+    "continueWithGoogle": "Continue with Google",
+    "or": "or",
+    "sendResetLink": "Send Reset Link",
+    "resetPasswordCta": "Reset Password",
+    "backToLogin": "Back to Login",
+    "agreeTermsPrefix": "I agree to the",
+    "termsLink": "Terms of Service",
+    "privacyLink": "Privacy Policy",
+    "and": "and",
+    "avatarPicker": {
+      "title": "Pick Your Mimoo",
+      "subtitle": "This character will represent you on Mimoo. You can change it later!",
+      "character": "Character",
+      "skinTone": "Skin Tone",
+      "outfit": "Outfit Color"
+    },
+    "confirmation": {
+      "title": "Check your email! 📬",
+      "subtitle": "We've sent a confirmation link to {email}. Click the link to activate your account.",
+      "helper": "Didn't receive it? Check spam folder or wait a few minutes.",
+      "backToLogin": "Back to Login"
+    },
+    "forgotSent": {
+      "title": "Link sent! 💌",
+      "subtitle": "We've sent a password reset link to {email}. Check your inbox!",
+      "helper": "Link is valid for 1 hour. If you didn't receive it, check spam folder."
+    },
+    "resetDone": {
+      "title": "Password reset successfully!",
+      "subtitle": "Redirecting you to dashboard..."
+    }
+  },
+  "AuthPages": {
+    "login": {
+      "title": "Welcome back!",
+      "subtitle": "Sign in to your Mimoo 💜",
+      "noAccount": "Don't have an account?",
+      "register": "Sign up here"
+    },
+    "register": {
+      "title": "Hello, Mimoo friend! 👋",
+      "subtitle": "Create an account to start protecting what matters.",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in here"
+    },
+    "forgotPassword": {
+      "title": "Forgot password?",
+      "subtitle": "No worries, we'll send a reset link to your email.",
+      "back": "Remember your password?",
+      "loginLink": "Sign in again"
+    },
+    "resetPassword": {
+      "title": "Create a new password",
+      "subtitle": "Choose a strong password to keep your account safe."
+    },
+    "authError": {
+      "title": "Oops, something went wrong 🥺",
+      "subtitle": "There was an issue signing you in. Please try again!",
+      "tryAgain": "Try Again"
+    }
+  },
+  "Dashboard": {
+    "greeting": "Hello, {name}! 👋",
+    "subtitle": "Welcome to your Mimoo Dashboard",
+    "comingSoonTitle": "Dashboard coming soon!",
+    "comingSoonDesc": "We're still building cool features for you. Stay tuned!",
+    "yourMimoo": "Your Mimoo",
+    "stats": {
+      "itemsProtected": "Items Protected",
+      "scans": "Total Scans",
+      "reunions": "Successful Returns"
+    },
+    "logout": "Sign Out"
   }
 }

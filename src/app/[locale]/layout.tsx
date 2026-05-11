@@ -31,6 +31,9 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Layout pakai cookies untuk auth (via Navbar) — harus dynamic
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: {

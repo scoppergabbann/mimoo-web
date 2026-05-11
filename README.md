@@ -29,7 +29,8 @@ Mimoo dibuat **di Indonesia, untuk Indonesia** 🇮🇩 — dengan karakter avat
 | Language | TypeScript |
 | Styling | [Tailwind CSS](https://tailwindcss.com/) |
 | i18n | [next-intl](https://next-intl-docs.vercel.app/) |
-| Database & Auth | [Supabase](https://supabase.com/) |
+| Database & Auth | [Supabase](https://supabase.com/) (Email + Google OAuth) |
+| Forms | [react-hook-form](https://react-hook-form.com/) + [Zod](https://zod.dev/) |
 | Encryption | [crypto-js](https://github.com/brix/crypto-js) (AES) |
 | Fonts | Plus Jakarta Sans + Inter |
 
@@ -183,28 +184,72 @@ Mimoo menggunakan **AES encryption** (via crypto-js) untuk:
 
 ---
 
+## 🔐 Authentication Setup (Phase 2)
+
+### Step 1: Create Supabase Project
+1. Sign up di [supabase.com](https://supabase.com)
+2. Buat project baru (gratis, ~2 menit)
+3. Settings → API → copy `URL`, `anon key`, `service_role key`
+4. Paste ke `.env.local`
+
+### Step 2: Run SQL Migration
+1. Buka **SQL Editor** di Supabase Dashboard
+2. Copy isi file `supabase/migrations/001_profiles.sql`
+3. Paste & klik **Run**
+4. Check Table Editor → harus ada table `profiles` baru
+
+### Step 3: Enable Google OAuth (Optional)
+1. Setup OAuth client di [Google Cloud Console](https://console.cloud.google.com/)
+2. Authorized redirect URI: `https://<your-project>.supabase.co/auth/v1/callback`
+3. Di Supabase: **Authentication → Providers → Google** → enable & paste Client ID/Secret
+4. Detail lengkap ada di `.env.example` comments
+
+### Step 4: Configure Email Templates (Optional)
+Supabase Dashboard → **Authentication → Email Templates** → customize sesuai brand Mimoo.
+
+### Step 5: Test!
+```bash
+npm run dev
+```
+- `/register` → daftar akun baru
+- `/login` → masuk
+- `/dashboard` → protected route
+
+---
+
 ## 🗺️ Roadmap
 
-### ✅ Phase 1 (Current) — Landing Pages
+### ✅ Phase 1 — Landing Pages
 - Marketing site (Beranda, Cara Kerja, Produk, Harga, Tentang)
 - Avatar system foundation (4 karakter)
 - Bilingual (ID/EN)
 - Responsive & accessible
 
-### 🚧 Phase 2 — Auth & Dashboard
-- Google OAuth via Supabase
-- User dashboard (manage items)
-- Avatar customizer (12 karakter lengkap)
-- QR code generation
+### ✅ Phase 2 — Auth Foundation
+- ✅ Email/password registration & login
+- ✅ Google OAuth integration
+- ✅ Forgot password + magic link reset
+- ✅ Email confirmation flow
+- ✅ Avatar picker built into registration (2-step form)
+- ✅ Protected dashboard route (auto-redirect kalau belum login)
+- ✅ User-aware navbar (avatar menu, logout)
+- ✅ Supabase Row Level Security (RLS) ready
+- ✅ SQL migration file untuk profiles table
 
-### 🔮 Phase 3 — Recovery System
+### 🚧 Phase 3 — Full Dashboard & Items
+- User dashboard with stats
+- Item management (add, edit, delete)
+- Avatar customizer (12 karakter lengkap)
+- QR code generation per item
+
+### 🔮 Phase 4 — Recovery System
 - Lost mode toggle
 - QR scan landing page (anonymous-friendly)
 - Finder message form
 - Encrypted notifications
 - Reward system
 
-### 🎯 Phase 4 — Mobile App
+### 🎯 Phase 5 — Mobile App
 - React Native / Flutter
 - Push notifications
 - NFC support
