@@ -185,36 +185,51 @@
     "buyNow": "Buy Now"
   },
   "PricingPage": {
-    "title": "Simple pricing",
-    "subtitle": "Start free. Upgrade when you need more.",
+    "title": "Free for everyone! 💜",
+    "subtitle": "Mimoo is free forever. Because protecting what matters should be accessible to all.",
     "free": {
-      "name": "Mimoo Free",
+      "name": "All Features — Free",
       "price": "Rp 0",
       "period": "forever",
-      "desc": "For anyone just starting out",
-      "features": [
-        "Up to 3 registered items",
-        "Basic QR Recovery Page",
-        "Unlimited finder messages",
-        "1 basic Mimoo character"
-      ]
-    },
-    "premium": {
-      "name": "Mimoo Premium",
-      "price": "Rp 39,000",
-      "period": "per month",
-      "desc": "For those who want more",
+      "desc": "No paid tiers. No hidden limits.",
       "features": [
         "Unlimited items",
+        "QR Recovery Page",
+        "Lost Mode with WhatsApp bridge",
+        "Real-time notifications",
         "All Indonesian characters 🇮🇩",
-        "Lost Mode with rewards",
-        "Priority notifications",
-        "Custom Recovery Page",
-        "Premium badge"
-      ],
-      "popular": "Most Popular"
+        "Privacy-first by design",
+        "No ads, ever"
+      ]
     },
-    "choosePlan": "Choose Plan"
+    "donation": {
+      "name": "Support Mimoo",
+      "subtitle": "Love Mimoo? Help us keep growing.",
+      "desc": "As a local Indonesian product, Mimoo is built to help our community. If Mimoo helps you, any support means a lot — one-time or recurring, up to you 🫶",
+      "cta": "Support Mimoo",
+      "thankYou": "Every contribution directly keeps Mimoo free & growing."
+    },
+    "whyFree": {
+      "title": "Why free?",
+      "items": [
+        {
+          "emoji": "🇮🇩",
+          "title": "Made for Indonesia",
+          "desc": "Mimoo is built to help Indonesians. Not to be an expensive commercial product."
+        },
+        {
+          "emoji": "🫶",
+          "title": "Losing things is painful",
+          "desc": "Mimoo should ease that, not add to it. So we open all features for free."
+        },
+        {
+          "emoji": "💜",
+          "title": "Community, not customers",
+          "desc": "We believe in donations & community. If Mimoo helps you, support if you can. If not, that's okay too."
+        }
+      ]
+    },
+    "choosePlan": "Get Started"
   },
   "AboutPage": {
     "title": "The Mimoo Story",
@@ -314,15 +329,144 @@
   },
   "Dashboard": {
     "greeting": "Hello, {name}! 👋",
-    "subtitle": "Welcome to your Mimoo Dashboard",
-    "comingSoonTitle": "Dashboard coming soon!",
-    "comingSoonDesc": "We're still building cool features for you. Stay tuned!",
+    "subtitle": "Manage your belongings here",
     "yourMimoo": "Your Mimoo",
+    "logout": "Sign Out",
     "stats": {
       "itemsProtected": "Items Protected",
       "scans": "Total Scans",
-      "reunions": "Successful Returns"
+      "reunions": "Successful Returns",
+      "newReports": "New Reports"
     },
-    "logout": "Sign Out"
+    "emptyState": {
+      "title": "Protect your first item! ✨",
+      "description": "Create your first Mimoo — attach it to anything valuable. If lost, we'll help bring it back to you.",
+      "cta": "Create Your First Item"
+    },
+    "yourItems": "Your Items",
+    "addNew": "Add New",
+    "recentReports": "Recent Reports",
+    "viewAll": "View All"
+  },
+  "NewItem": {
+    "title": "Protect a New Item",
+    "subtitle": "Takes just a few seconds. Let's go!",
+    "back": "Back",
+    "form": {
+      "name": "Item Name",
+      "nameHelper": "Pick a name you'll recognize easily",
+      "namePlaceholder": "e.g. Work Wallet, Driver License, College Bag",
+      "category": "Category",
+      "categoryHelper": "Pick one (optional)",
+      "message": "Message for Finder",
+      "messageHelper": "This message appears when someone scans the QR — make it warm & clear!",
+      "messagePlaceholder": "Hi! If you found this item, please reach out to the owner. Thank you so much! 💜",
+      "examplesTitle": "Quick examples",
+      "submit": "Create Mimoo",
+      "cancel": "Cancel"
+    },
+    "examples": {
+      "wallet": "Work Wallet",
+      "ktm": "Student ID",
+      "sim": "Driver License",
+      "ktp": "ID Card",
+      "bag": "College Bag",
+      "laptop": "Work Laptop"
+    }
+  },
+  "ItemDetail": {
+    "back": "Back to Dashboard",
+    "qrTitle": "Your QR Code",
+    "qrSubtitle": "Print or paste anywhere",
+    "scanCount": "Scanned {count} times",
+    "noScans": "No scans yet",
+    "details": "Item Details",
+    "category": "Category",
+    "message": "Message",
+    "noMessage": "No message",
+    "createdAt": "Created at",
+    "edit": "Edit",
+    "delete": "Delete Item",
+    "deleteConfirm": "Are you sure you want to delete this item? This action cannot be undone.",
+    "deleteCancel": "Cancel",
+    "deleteConfirmYes": "Yes, Delete",
+    "deleting": "Deleting..."
+  },
+  "LostMode": {
+    "title": "Lost Mode",
+    "description": "Activate if your item is lost. The recovery page becomes more urgent and shows emergency contact.",
+    "activate": "Activate Lost Mode",
+    "deactivate": "Deactivate Lost Mode",
+    "warningTitle": "Privacy note",
+    "warningDesc": "Contacts are encrypted and only revealed when finder clicks the button. We also log who reveals them (anti-spam).",
+    "whatsapp": "WhatsApp Number",
+    "whatsappPlaceholder": "+628123456789",
+    "whatsappHelper": "Format: 08xxx or +62xxx",
+    "rewardCheckbox": "Offer a reward to finder",
+    "rewardLabel": "Reward Description",
+    "rewardPlaceholder": "e.g. IDR 100,000 or phone credit 💜",
+    "cancel": "Cancel",
+    "saveAndActivate": "Save & Activate",
+    "confirmDeactivate": "Sure you want to turn off lost mode? Emergency contact will no longer appear on the recovery page.",
+    "activeTitle": "This item is marked as LOST",
+    "activeDesc": "Recovery page shows urgent mode with emergency contact. Hope your item returns soon! 🤞"
+  },
+  "Reports": {
+    "title": "Finder Reports",
+    "empty": "No reports yet. When someone scans the QR and sends a message, they'll appear here.",
+    "markSeen": "Mark as Seen",
+    "markResolved": "Item Recovered",
+    "markSpam": "Spam",
+    "locationLabel": "Location",
+    "contactLabel": "Contact",
+    "statusNew": "New",
+    "statusSeen": "Seen",
+    "statusResolved": "Resolved",
+    "statusSpam": "Spam",
+    "anonymous": "Anonymous",
+    "viewOnMap": "View on Map"
+  },
+  "Recovery": {
+    "badge": "Found via Mimoo",
+    "thankYou": "Thanks for helping this belonging find its way home 🫶",
+    "belongsTo": "This belongs to",
+    "foundButton": "I Found This Item",
+    "lostBadge": "⚠️ WANTED",
+    "lostUrgentTitle": "This item is currently lost!",
+    "lostUrgentDesc": "The owner is looking for this. Please help return it by contacting them below.",
+    "rewardBadge": "Reward Available!",
+    "rewardLabel": "Reward from owner",
+    "contactTitle": "Contact Owner",
+    "contactDesc": "Click below to chat directly via WhatsApp.",
+    "poweredBy": "Powered by",
+    "learnMoreAboutMimoo": "Learn about Mimoo →",
+    "notFoundTitle": "Recovery code not valid",
+    "notFoundDesc": "Hmm, looks like this QR is no longer active or not registered with Mimoo.",
+    "backHome": "Back to Home"
+  },
+  "FinderForm": {
+    "title": "Yay, you're a hero today! 💜",
+    "subtitle": "Just send a short message. The owner will be notified instantly.",
+    "messageLabel": "Message to Owner",
+    "messagePlaceholder": "Hi! I found this item at...",
+    "messageHelper": "Tell where & how you found it",
+    "locationLabel": "Where You Found It",
+    "locationPlaceholder": "e.g. 2nd floor food court Mall X, Jakarta",
+    "locationHelper": "Help the owner picture exactly where",
+    "useGpsLabel": "Use GPS for precise location",
+    "gpsLoading": "Getting location...",
+    "gpsCaptured": "GPS location captured ✓",
+    "gpsError": "Couldn't get GPS, type manually",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "e.g. Ahmad",
+    "nameOptional": "optional",
+    "contactLabel": "How the Owner Can Reach You",
+    "contactPlaceholder": "e.g. WA 0812xxx or email you@example.com",
+    "contactOptional": "optional",
+    "submit": "Send Message",
+    "cancel": "Cancel",
+    "successTitle": "Message sent! 💜",
+    "successDesc": "We've notified the owner. You're kind for taking the time to help. May good karma come back to you! 🫶",
+    "backHome": "Back to Home"
   }
 }

@@ -16,7 +16,6 @@ const PROTECTED_ROUTES = ['/dashboard'];
 const AUTH_ROUTES = ['/login', '/register', '/forgot-password'];
 
 function isProtectedPath(pathname: string): boolean {
-  // Strip locale prefix untuk check (/id/dashboard → /dashboard)
   const withoutLocale = pathname.replace(/^\/(id|en)/, '') || '/';
   return PROTECTED_ROUTES.some((route) => withoutLocale.startsWith(route));
 }
@@ -31,25 +30,40 @@ function getLocaleFromPath(pathname: string): 'id' | 'en' {
   return 'id';
 }
 
-export async function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-
-  // 1. Run i18n middleware first (handles locale routing)
-  const intlResponse = intlMiddleware(request);
-
-  // 2. Then handle auth session refresh + route protection
-  let response = intlResponse;
-
-  // Skip auth check for static/internal paths
-  if (
+/**
+ * Paths yang BYPASS i18n middleware (no locale prefix added).
+ * Ini penting untuk:
+ * - OAuth callback (URL persis seperti di Google/Supabase config)
+ * - Public recovery pages (URL pendek, brand-able: mimoo.id/found/CODE)
+ */
+function isBypassPath(pathname: string): boolean {
+  return (
+    pathname.startsWith('/auth/') ||
+    pathname.startsWith('/found/') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.includes('.')
-  ) {
-    return response;
+  );
+}
+
+export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  // 🔑 BYPASS for OAuth callback dan public recovery pages
+  // Ini PENTING: /auth/callback dan /found/* gak boleh ke-redirect ke /id/...
+  if (isBypassPath(pathname)) {
+    // Still handle Supabase session for /auth/* paths
+    if (pathname.startsWith('/auth/')) {
+      return handleSupabaseSession(request);
+    }
+    // Public recovery pages — no session needed, no locale needed
+    return NextResponse.next();
   }
 
-  // Create Supabase client with cookie handling
+  // 1. Run i18n middleware (handles locale routing)
+  let response = intlMiddleware(request);
+
+  // 2. Create Supabase client to refresh session
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -62,9 +76,7 @@ export async function middleware(request: NextRequest) {
           cookiesToSet.forEach(({ name, value }: { name: string; value: string }) =>
             request.cookies.set(name, value)
           );
-          response = NextResponse.next({
-            request,
-          });
+          response = NextResponse.next({ request });
           cookiesToSet.forEach(
             ({ name, value, options }: { name: string; value: string; options?: CookieOptions }) =>
               response.cookies.set(name, value, options)
@@ -74,7 +86,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  // IMPORTANT: refresh session if needed
+  // IMPORTANT: refresh session if needed (Supabase requirement)
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -83,18 +95,49 @@ export async function middleware(request: NextRequest) {
 
   // Route protection logic
   if (isProtectedPath(pathname) && !user) {
-    // Not authenticated → redirect to login
     const loginUrl = new URL(`/${locale}/login`, request.url);
     loginUrl.searchParams.set('redirect', pathname);
     return NextResponse.redirect(loginUrl);
   }
 
   if (isAuthPath(pathname) && user) {
-    // Already authenticated → redirect to dashboard
     const dashboardUrl = new URL(`/${locale}/dashboard`, request.url);
     return NextResponse.redirect(dashboardUrl);
   }
 
+  return response;
+}
+
+/**
+ * Minimal Supabase session handler — only for /auth/* paths.
+ * Refreshes session tanpa locale redirect logic.
+ */
+async function handleSupabaseSession(request: NextRequest) {
+  let response = NextResponse.next({ request });
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll();
+        },
+        setAll(cookiesToSet: { name: string; value: string; options?: CookieOptions }[]) {
+          cookiesToSet.forEach(({ name, value }: { name: string; value: string }) =>
+            request.cookies.set(name, value)
+          );
+          response = NextResponse.next({ request });
+          cookiesToSet.forEach(
+            ({ name, value, options }: { name: string; value: string; options?: CookieOptions }) =>
+              response.cookies.set(name, value, options)
+          );
+        },
+      },
+    }
+  );
+
+  await supabase.auth.getUser();
   return response;
 }
 
@@ -103,6 +146,8 @@ export const config = {
   matcher: [
     '/',
     '/(id|en)/:path*',
+    '/auth/:path*',
+    '/found/:path*',
     '/((?!api|_next|_vercel|.*\\..*).*)',
   ],
 };

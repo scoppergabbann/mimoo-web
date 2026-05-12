@@ -185,36 +185,51 @@
     "buyNow": "Beli Sekarang"
   },
   "PricingPage": {
-    "title": "Harga sederhana",
-    "subtitle": "Mulai gratis. Upgrade kalau butuh fitur lebih.",
+    "title": "Gratis untuk semua! 💜",
+    "subtitle": "Mimoo gratis selamanya. Karena melindungi yang berharga harus bisa diakses semua orang.",
     "free": {
-      "name": "Mimoo Free",
+      "name": "Semua Fitur — Gratis",
       "price": "Rp 0",
       "period": "selamanya",
-      "desc": "Untuk siapa saja yang baru mulai",
-      "features": [
-        "Sampai 3 item terdaftar",
-        "QR Recovery Page dasar",
-        "Pesan finder tanpa batas",
-        "1 karakter Mimoo dasar"
-      ]
-    },
-    "premium": {
-      "name": "Mimoo Premium",
-      "price": "Rp 39.000",
-      "period": "per bulan",
-      "desc": "Untuk yang ingin lebih",
+      "desc": "Tidak ada paket berbayar. Tidak ada batasan tersembunyi.",
       "features": [
         "Item tak terbatas",
+        "QR Recovery Page",
+        "Lost Mode dengan WhatsApp bridge",
+        "Notifikasi real-time",
         "Semua karakter Indonesia 🇮🇩",
-        "Lost Mode dengan reward",
-        "Priority notifications",
-        "Recovery Page custom",
-        "Premium badge"
-      ],
-      "popular": "Paling Populer"
+        "Privacy-first by design",
+        "No ads, ever"
+      ]
     },
-    "choosePlan": "Pilih Paket"
+    "donation": {
+      "name": "Dukung Mimoo",
+      "subtitle": "Suka Mimoo? Bantu kami terus berkembang.",
+      "desc": "Sebagai produk lokal Indonesia, Mimoo dibuat untuk memudahkan masyarakat. Kalau Mimoo berguna untuk kamu, dukungan apapun sangat berarti — sekali atau berulang, terserah kamu 🫶",
+      "cta": "Dukung Mimoo",
+      "thankYou": "Setiap dukungan langsung membantu Mimoo tetap gratis & berkembang."
+    },
+    "whyFree": {
+      "title": "Kenapa gratis?",
+      "items": [
+        {
+          "emoji": "🇮🇩",
+          "title": "Made for Indonesia",
+          "desc": "Mimoo dibuat untuk mempermudah masyarakat Indonesia. Bukan untuk dijadiin produk komersil yang mahal."
+        },
+        {
+          "emoji": "🫶",
+          "title": "Kehilangan itu menyakitkan",
+          "desc": "Mimoo seharusnya bantu meredakan, bukan menambah beban. Jadi semua fitur kami buka gratis."
+        },
+        {
+          "emoji": "💜",
+          "title": "Komunitas, bukan customer",
+          "desc": "Kami percaya pada model donasi & komunitas. Kalau Mimoo bantu kamu, dukung kalau bisa. Kalau belum, ya gak apa-apa juga."
+        }
+      ]
+    },
+    "choosePlan": "Mulai Sekarang"
   },
   "AboutPage": {
     "title": "Cerita Mimoo",
@@ -314,15 +329,144 @@
   },
   "Dashboard": {
     "greeting": "Halo, {name}! 👋",
-    "subtitle": "Selamat datang di Mimoo Dashboard",
-    "comingSoonTitle": "Dashboard segera hadir!",
-    "comingSoonDesc": "Kita masih ngerakit fitur-fitur keren untuk kamu. Stay tuned ya!",
+    "subtitle": "Kelola barang-barangmu di sini",
     "yourMimoo": "Mimoo Kamu",
+    "logout": "Keluar dari Akun",
     "stats": {
       "itemsProtected": "Item Terlindungi",
       "scans": "Total Scan",
-      "reunions": "Berhasil Kembali"
+      "reunions": "Berhasil Kembali",
+      "newReports": "Laporan Baru"
     },
-    "logout": "Keluar dari Akun"
+    "emptyState": {
+      "title": "Yuk, lindungi barang pertamamu! ✨",
+      "description": "Buat Mimoo pertamamu — tempel di apapun yang berharga. Kalau hilang, kami bantu kembalikan ke kamu.",
+      "cta": "Buat Item Pertama"
+    },
+    "yourItems": "Barangmu",
+    "addNew": "Tambah Baru",
+    "recentReports": "Laporan Terbaru",
+    "viewAll": "Lihat Semua"
+  },
+  "NewItem": {
+    "title": "Lindungi Barang Baru",
+    "subtitle": "Cuma butuh beberapa detik. Yuk!",
+    "back": "Kembali",
+    "form": {
+      "name": "Nama Barang",
+      "nameHelper": "Kasih nama yang gampang kamu kenali",
+      "namePlaceholder": "Mis. Dompet Kerja, SIM C, Tas Kuliah",
+      "category": "Kategori",
+      "categoryHelper": "Pilih satu (opsional)",
+      "message": "Pesan untuk Penemu",
+      "messageHelper": "Pesan ini muncul saat orang scan QR — bikin yang hangat & jelas ya!",
+      "messagePlaceholder": "Halo! Kalau kamu menemukan barang ini, tolong hubungi pemiliknya ya. Terima kasih banyak! 💜",
+      "examplesTitle": "Contoh cepat",
+      "submit": "Buat Mimoo",
+      "cancel": "Batal"
+    },
+    "examples": {
+      "wallet": "Dompet Kerja",
+      "ktm": "Kartu Mahasiswa",
+      "sim": "SIM C",
+      "ktp": "KTP",
+      "bag": "Tas Kuliah",
+      "laptop": "Laptop Kerja"
+    }
+  },
+  "ItemDetail": {
+    "back": "Kembali ke Dashboard",
+    "qrTitle": "QR Code Kamu",
+    "qrSubtitle": "Print atau tempel di mana saja",
+    "scanCount": "{count} kali di-scan",
+    "noScans": "Belum ada yang scan",
+    "details": "Detail Item",
+    "category": "Kategori",
+    "message": "Pesan",
+    "noMessage": "Tidak ada pesan",
+    "createdAt": "Dibuat pada",
+    "edit": "Edit",
+    "delete": "Hapus Item",
+    "deleteConfirm": "Yakin mau hapus item ini? Aksi ini tidak bisa dibatalkan.",
+    "deleteCancel": "Batal",
+    "deleteConfirmYes": "Ya, Hapus",
+    "deleting": "Menghapus..."
+  },
+  "LostMode": {
+    "title": "Mode Hilang",
+    "description": "Aktifkan kalau barangmu hilang. Recovery page akan berubah jadi lebih urgent dan menampilkan kontak darurat.",
+    "activate": "Aktifkan Lost Mode",
+    "deactivate": "Nonaktifkan Lost Mode",
+    "warningTitle": "Penting tentang privasi",
+    "warningDesc": "Kontak akan di-enkripsi dan hanya muncul saat penemu klik tombol. Kami juga mencatat siapa yang melihatnya (anti-spam).",
+    "whatsapp": "Nomor WhatsApp",
+    "whatsappPlaceholder": "08123456789",
+    "whatsappHelper": "Format: 08xxx atau +62xxx",
+    "rewardCheckbox": "Berikan reward untuk penemu",
+    "rewardLabel": "Deskripsi Reward",
+    "rewardPlaceholder": "Mis. Rp 100.000 atau pulsa 50rb 💜",
+    "cancel": "Batal",
+    "saveAndActivate": "Simpan & Aktifkan",
+    "confirmDeactivate": "Yakin mau matikan lost mode? Kontak darurat tidak akan muncul lagi di recovery page.",
+    "activeTitle": "Item ini sedang ditandai HILANG",
+    "activeDesc": "Recovery page menampilkan mode urgent dengan kontak darurat. Doakan barangmu cepat kembali ya! 🤞"
+  },
+  "Reports": {
+    "title": "Laporan Penemu",
+    "empty": "Belum ada laporan dari penemu. Saat ada yang scan QR dan kirim pesan, akan muncul di sini.",
+    "markSeen": "Tandai Sudah Dilihat",
+    "markResolved": "Sudah Diambil",
+    "markSpam": "Spam",
+    "locationLabel": "Lokasi",
+    "contactLabel": "Kontak",
+    "statusNew": "Baru",
+    "statusSeen": "Sudah Dilihat",
+    "statusResolved": "Sudah Selesai",
+    "statusSpam": "Spam",
+    "anonymous": "Anonim",
+    "viewOnMap": "Lihat di Peta"
+  },
+  "Recovery": {
+    "badge": "Found via Mimoo",
+    "thankYou": "Terima kasih sudah membantu barang ini menemukan jalannya pulang 🫶",
+    "belongsTo": "Barang ini milik",
+    "foundButton": "Saya Menemukan Barang Ini",
+    "lostBadge": "⚠️ DICARI",
+    "lostUrgentTitle": "Barang ini sedang hilang!",
+    "lostUrgentDesc": "Pemilik sedang mencari barang ini. Yuk bantu kembalikan dengan menghubungi mereka langsung di bawah ini.",
+    "rewardBadge": "Ada Reward!",
+    "rewardLabel": "Reward dari pemilik",
+    "contactTitle": "Hubungi Pemilik",
+    "contactDesc": "Klik tombol di bawah untuk chat langsung via WhatsApp.",
+    "poweredBy": "Powered by",
+    "learnMoreAboutMimoo": "Pelajari Mimoo →",
+    "notFoundTitle": "Recovery code tidak valid",
+    "notFoundDesc": "Hmm, sepertinya QR ini sudah tidak aktif atau tidak terdaftar di Mimoo.",
+    "backHome": "Kembali ke Beranda"
+  },
+  "FinderForm": {
+    "title": "Yay, kamu hero hari ini! 💜",
+    "subtitle": "Tinggal kirim pesan singkat. Pemilik akan langsung dapat notif.",
+    "messageLabel": "Pesan untuk Pemilik",
+    "messagePlaceholder": "Halo! Saya menemukan barang ini di...",
+    "messageHelper": "Ceritain di mana & gimana ketemunya",
+    "locationLabel": "Lokasi Ditemukan",
+    "locationPlaceholder": "Mis. Kantin lantai 2 Mall X, Jakarta",
+    "locationHelper": "Bantu pemilik bayangin di mana persis",
+    "useGpsLabel": "Pakai GPS untuk lokasi akurat",
+    "gpsLoading": "Mengambil lokasi...",
+    "gpsCaptured": "Lokasi GPS sudah ke-ambil ✓",
+    "gpsError": "Gagal ambil GPS, ketik manual aja ya",
+    "nameLabel": "Nama Kamu",
+    "namePlaceholder": "Mis. Ahmad",
+    "nameOptional": "opsional",
+    "contactLabel": "Cara Pemilik Bisa Hubungi Kamu",
+    "contactPlaceholder": "Mis. WA 0812xxx atau email kamu@example.com",
+    "contactOptional": "opsional",
+    "submit": "Kirim Pesan",
+    "cancel": "Batal",
+    "successTitle": "Pesan terkirim! 💜",
+    "successDesc": "Kami sudah notif pemilik. Kamu baik banget sudah luangin waktu untuk bantu. Semoga kebaikan ini balik ke kamu! 🫶",
+    "backHome": "Kembali ke Beranda"
   }
 }

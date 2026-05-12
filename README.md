@@ -192,11 +192,11 @@ Mimoo menggunakan **AES encryption** (via crypto-js) untuk:
 3. Settings → API → copy `URL`, `anon key`, `service_role key`
 4. Paste ke `.env.local`
 
-### Step 2: Run SQL Migration
+### Step 2: Run SQL Migrations (penting! urutan harus benar)
 1. Buka **SQL Editor** di Supabase Dashboard
-2. Copy isi file `supabase/migrations/001_profiles.sql`
-3. Paste & klik **Run**
-4. Check Table Editor → harus ada table `profiles` baru
+2. **Migration 001** — copy isi `supabase/migrations/001_profiles.sql` → Run
+3. **Migration 002** — copy isi `supabase/migrations/002_items.sql` → Run
+4. Check Table Editor → harus ada 5 tables: `profiles`, `items`, `finder_reports`, `emergency_contacts`, `contact_reveals`
 
 ### Step 3: Enable Google OAuth (Optional)
 1. Setup OAuth client di [Google Cloud Console](https://console.cloud.google.com/)
@@ -236,24 +236,31 @@ npm run dev
 - ✅ Supabase Row Level Security (RLS) ready
 - ✅ SQL migration file untuk profiles table
 
-### 🚧 Phase 3 — Full Dashboard & Items
-- User dashboard with stats
-- Item management (add, edit, delete)
-- Avatar customizer (12 karakter lengkap)
-- QR code generation per item
+### ✅ Phase 3 — Core MVP Flow (Items & Recovery)
+- ✅ Dashboard overhaul with real items list & stats
+- ✅ Create item with category picker (KTP, SIM, dompet, tas, dll)
+- ✅ Auto-generated unique recovery code (`mimoo.id/found/ABCD2345`)
+- ✅ QR code generation + download as PNG
+- ✅ Public recovery page (warm, emotional, anonymous-friendly)
+- ✅ Finder form (message + location + optional GPS)
+- ✅ Lost Mode toggle with encrypted emergency contact
+- ✅ WhatsApp bridge (number never exposed in HTML)
+- ✅ Anti-abuse: contact reveal logged with hashed IP
+- ✅ Reward system (optional, owner-defined)
+- ✅ Donation-based model (no paywall, free forever)
 
-### 🔮 Phase 4 — Recovery System
-- Lost mode toggle
-- QR scan landing page (anonymous-friendly)
-- Finder message form
-- Encrypted notifications
-- Reward system
-
-### 🎯 Phase 5 — Mobile App
-- React Native / Flutter
+### 🚧 Phase 4 — Notifications & Mobile App
+- Email notifications (finder report → owner)
+- Avatar customizer page (12 karakter)
+- React Native mobile app
 - Push notifications
 - NFC support
-- Offline-first
+
+### 🔮 Phase 5 — Community & Growth
+- Public "good karma" leaderboard (optional opt-in)
+- Reward fulfillment workflow
+- Donation page (Trakteer/Saweria integration)
+- Community stories
 
 ---
 

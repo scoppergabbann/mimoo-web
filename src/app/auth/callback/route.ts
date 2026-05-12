@@ -4,8 +4,10 @@ import { createClient } from '@/lib/supabase/server';
 /**
  * OAuth Callback Handler
  *
- * Supabase redirects to this route setelah user complete OAuth flow.
- * Kita exchange the code untuk session, lalu redirect ke dashboard.
+ * Path: /auth/callback (NO locale prefix — bypassed by middleware)
+ *
+ * Receives the OAuth code from Supabase after Google sign-in,
+ * exchanges it for a session, then redirects to dashboard (with locale).
  *
  * Also handles email confirmation links (signup confirmation, password reset).
  */
@@ -13,22 +15,38 @@ export async function GET(request: NextRequest) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get('code');
   const next = searchParams.get('next') ?? '/dashboard';
-  const locale = (searchParams.get('locale') as 'id' | 'en') || 'id';
 
-  if (code) {
+  // Determine locale (default 'id')
+  let locale: 'id' | 'en' = 'id';
+  const localeParam = searchParams.get('locale');
+  if (localeParam === 'en' || localeParam === 'id') {
+    locale = localeParam;
+  }
+
+  if (!code) {
+    // No code provided → error
+    return NextResponse.redirect(`${origin}/${locale}/auth/error`);
+  }
+
+  try {
     const supabase = await createClient();
     const { error } = await supabase.auth.exchangeCodeForSession(code);
 
-    if (!error) {
-      // Successful auth → redirect ke next or dashboard (dengan locale prefix)
-      const redirectPath = next.startsWith('/') ? next : `/${next}`;
-      const finalPath = redirectPath.startsWith(`/${locale}`)
-        ? redirectPath
-        : `/${locale}${redirectPath}`;
-      return NextResponse.redirect(`${origin}${finalPath}`);
+    if (error) {
+      console.error('OAuth exchange error:', error.message);
+      return NextResponse.redirect(`${origin}/${locale}/auth/error`);
     }
-  }
 
-  // Error → redirect ke auth-error page
-  return NextResponse.redirect(`${origin}/${locale}/auth/error`);
+    // Successful auth → redirect to next path (with locale prefix)
+    const cleanNext = next.startsWith('/') ? next : `/${next}`;
+
+    // If next already has a locale prefix, use it; otherwise add one
+    const hasLocalePrefix = cleanNext.startsWith('/id/') || cleanNext.startsWith('/en/');
+    const finalPath = hasLocalePrefix ? cleanNext : `/${locale}${cleanNext}`;
+
+    return NextResponse.redirect(`${origin}${finalPath}`);
+  } catch (err) {
+    console.error('OAuth callback error:', err);
+    return NextResponse.redirect(`${origin}/${locale}/auth/error`);
+  }
 }
