@@ -10,6 +10,14 @@
     "forCards": "Untuk Kartu",
     "pricing": "Harga",
     "about": "Tentang",
+    "help": "Bantuan",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "careers": "Karir",
+    "contact": "Kontak",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan",
+    "legal": "Legal",
     "login": "Masuk",
     "register": "Daftar",
     "dashboard": "Dashboard",
@@ -485,5 +493,403 @@
     "successTitle": "Pesan terkirim! 💜",
     "successDesc": "Kami sudah notif pemilik. Kamu baik banget sudah luangin waktu untuk bantu. Semoga kebaikan ini balik ke kamu! 🫶",
     "backHome": "Kembali ke Beranda"
+  },
+  "HelpPage": {
+    "title": "Pusat Bantuan",
+    "subtitle": "Kami di sini untuk membantu. Pilih topik di bawah atau hubungi kami langsung.",
+    "badge": "Bantuan",
+    "searchPlaceholder": "Cari bantuan...",
+    "categories": {
+      "gettingStarted": {
+        "title": "Mulai dengan Mimoo",
+        "description": "Cara daftar, pilih karakter, dan buat item pertamamu",
+        "emoji": "✨"
+      },
+      "items": {
+        "title": "Mengelola Item",
+        "description": "Tambah, edit, dan hapus barang yang dilindungi Mimoo",
+        "emoji": "📦"
+      },
+      "qrAndPrint": {
+        "title": "QR Code & Print",
+        "description": "Generate QR, download PNG, dan cara print yang awet",
+        "emoji": "🖨️"
+      },
+      "lostMode": {
+        "title": "Lost Mode",
+        "description": "Cara aktifkan, tambah kontak darurat, dan reward",
+        "emoji": "⚠️"
+      },
+      "privacy": {
+        "title": "Privasi & Keamanan",
+        "description": "Cara Mimoo melindungi datamu dan kontak darurat",
+        "emoji": "🔒"
+      },
+      "billing": {
+        "title": "Donasi & Dukungan",
+        "description": "Mimoo gratis. Cara dukung kami kalau mau",
+        "emoji": "💜"
+      }
+    },
+    "contactCta": {
+      "title": "Tidak menemukan jawaban?",
+      "description": "Tim Mimoo siap membantu. Kirim pesan dan kami balas dalam 24 jam.",
+      "button": "Hubungi Kami"
+    }
+  },
+  "FaqPage": {
+    "title": "Pertanyaan yang Sering Ditanyakan",
+    "subtitle": "Jawaban cepat untuk pertanyaan umum tentang Mimoo.",
+    "badge": "FAQ",
+    "stillNeedHelp": "Masih butuh bantuan? Hubungi kami →",
+    "categories": {
+      "general": "Umum",
+      "account": "Akun",
+      "items": "Item & QR",
+      "lostMode": "Lost Mode",
+      "privacy": "Privasi",
+      "billing": "Donasi"
+    },
+    "items": {
+      "whatIsMimoo": {
+        "q": "Apa itu Mimoo?",
+        "a": "Mimoo adalah platform cozy untuk melindungi barang berhargamu dengan QR code. Kalau barangmu hilang dan ditemukan orang, mereka tinggal scan QR dan bisa langsung menghubungimu — semua dengan privasi terjaga.\n\nMimoo bukan sekedar utility — kami percaya kehilangan itu menyakitkan, dan setiap reunion adalah cerita yang layak dirayakan. 💜"
+      },
+      "isItFree": {
+        "q": "Apakah Mimoo benar-benar gratis?",
+        "a": "Ya! Mimoo 100% gratis selamanya. Tidak ada paket berbayar, tidak ada batasan tersembunyi, tidak ada iklan.\n\nKami percaya melindungi yang berharga harus bisa diakses semua orang. Kalau Mimoo membantumu, kamu bisa dukung lewat donasi (opsional)."
+      },
+      "howToRegister": {
+        "q": "Bagaimana cara daftar?",
+        "a": "Daftar mudah banget:\n1. Klik tombol 'Daftar' di kanan atas\n2. Isi nama, email, dan password (atau pakai Google)\n3. Pilih karakter Mimoo favorit kamu\n4. Selesai! Langsung bisa bikin item pertama"
+      },
+      "forgotPassword": {
+        "q": "Saya lupa password, gimana?",
+        "a": "Klik 'Lupa Password?' di halaman login, masukkan email kamu, dan kami akan kirim magic link untuk reset password. Cek inbox dalam 1-2 menit."
+      },
+      "deleteAccount": {
+        "q": "Bisakah saya hapus akun?",
+        "a": "Bisa! Untuk sekarang, hubungi kami di hello@mimoo.id untuk request hapus akun. Semua data kamu (items, reports, profile) akan dihapus permanen dalam 30 hari.\n\nKami juga akan tambahkan tombol self-service di dashboard segera."
+      },
+      "itemLimit": {
+        "q": "Berapa item maksimal yang bisa saya buat?",
+        "a": "Tidak ada batasan! Kamu bisa bikin item sebanyak yang kamu butuhkan, gratis. Mau lindungi semua KTP, SIM, dompet, tas, laptop — go ahead!"
+      },
+      "qrPrint": {
+        "q": "Bagaimana cara print QR code?",
+        "a": "1. Buka detail item kamu di dashboard\n2. Klik 'Download QR (PNG)' — file akan ter-download\n3. Print dari komputer/HP\n\nTips: Untuk best result, print di sticker paper (bisa beli di toko alat tulis) atau tempel ke kartu plastik tahan lama. Mimoo planning bikin physical card berkualitas — stay tuned!"
+      },
+      "scanCount": {
+        "q": "Mengapa scan count saya naik padahal tidak ada laporan?",
+        "a": "Scan count naik setiap kali ada yang buka URL recovery item kamu. Ini bisa terjadi karena:\n- Orang scan QR tapi belum kirim pesan\n- Bot search engine (jarang, karena URL kami tidak di-index)\n- Kamu sendiri buka URL untuk test\n\nIni normal dan justru bagus — artinya QR kamu terlihat & aktif."
+      },
+      "lostModeWhat": {
+        "q": "Apa itu Lost Mode?",
+        "a": "Lost Mode adalah toggle di setiap item untuk menandai bahwa barang sedang hilang. Saat aktif:\n- Recovery page berubah lebih urgent (warna pink, banner ⚠️)\n- Kontak darurat (WhatsApp) muncul untuk penemu hubungi kamu langsung\n- Bisa kasih reward (opsional)\n- Setiap akses kontak di-log untuk anti-abuse"
+      },
+      "whatsappPrivacy": {
+        "q": "Apakah nomor WhatsApp saya aman?",
+        "a": "Aman banget! Kami pakai 3 layer proteksi:\n1. Nomor di-enkripsi pakai AES di database (bukan plaintext)\n2. Tidak pernah muncul di HTML page — hanya muncul saat penemu klik 'Chat via WhatsApp'\n3. Setiap akses dicatat (IP di-hash, bukan raw) untuk audit anti-abuse"
+      },
+      "dataPrivacy": {
+        "q": "Bagaimana Mimoo melindungi data saya?",
+        "a": "Privacy adalah core value Mimoo:\n- Email & password disimpan aman di Supabase (industry-standard)\n- Kontak darurat di-enkripsi dengan AES\n- IP address di-hash, bukan raw (audit log)\n- URL recovery tidak di-index Google\n- Profile hanya menampilkan nama + avatar (no email/phone)\n- Tidak ada tracking pixels atau third-party analytics yang invasive"
+      },
+      "donation": {
+        "q": "Bagaimana saya bisa dukung Mimoo?",
+        "a": "Kalau Mimoo membantumu, kamu bisa:\n- Donasi via Trakteer/Saweria (segera tersedia)\n- Share Mimoo ke teman & keluarga\n- Beri feedback lewat email hello@mimoo.id\n- Beli Mimoo physical card (planning, segera!)"
+      },
+      "businessUse": {
+        "q": "Bisakah Mimoo dipakai untuk kantor/sekolah?",
+        "a": "Untuk sekarang Mimoo personal use, tapi kami planning fitur B2B (admin panel, bulk items, organization branding). Kalau kantor/sekolah kamu tertarik, email kami di hello@mimoo.id — kami senang ngobrol!"
+      }
+    }
+  },
+  "PrivacyPage": {
+    "title": "Kebijakan Privasi",
+    "subtitle": "Bagaimana Mimoo melindungi data kamu — dijelaskan dalam bahasa yang manusiawi.",
+    "badge": "Legal",
+    "lastUpdated": "Terakhir diupdate: 1 Januari 2026",
+    "intro": "Mimoo dibangun dengan privacy sebagai prinsip dasar, bukan checklist. Dokumen ini menjelaskan data apa yang kami kumpulkan, bagaimana kami menggunakannya, dan hak-hak kamu sebagai pengguna.",
+    "tldr": {
+      "title": "💜 TL;DR (Ringkasan)",
+      "items": [
+        "Kami minta minimum data yang dibutuhkan",
+        "Tidak ada iklan, tidak jual data ke pihak ketiga",
+        "Kontak darurat di-enkripsi (AES) di database",
+        "IP address di-hash sebelum disimpan (audit)",
+        "Kamu bisa request hapus akun & data kapan saja",
+        "URL recovery tidak di-index search engine"
+      ]
+    },
+    "sections": {
+      "dataCollected": {
+        "title": "1. Data yang Kami Kumpulkan",
+        "content": "Saat kamu pakai Mimoo, kami mengumpulkan:\n\n**Saat daftar:**\n- Nama (untuk display di profile & recovery page)\n- Email (untuk login & notifikasi)\n- Password (di-hash, kami sendiri tidak bisa lihat)\n- Pilihan avatar character\n\n**Saat pakai Mimoo:**\n- Item yang kamu buat (nama, kategori, pesan, recovery code)\n- Status item (aktif/lost)\n- Kontak darurat WhatsApp (jika Lost Mode aktif) — di-enkripsi\n- Reward description (opsional)\n\n**Saat ada yang scan QR kamu:**\n- Pesan penemu\n- Lokasi (text + GPS opsional)\n- Info penemu (kalau mereka isi: nama, kontak)\n- IP address penemu (di-hash, bukan raw)\n- User agent browser\n\nKami **tidak** mengumpulkan:\n- Lokasi kamu saat tidak pakai Mimoo\n- Riwayat browser kamu\n- Data kontak di HP kamu\n- Photos atau media tanpa explicit upload"
+      },
+      "howWeUse": {
+        "title": "2. Bagaimana Kami Menggunakan Data",
+        "content": "Data kamu digunakan untuk:\n\n- **Operasional Mimoo**: menampilkan item kamu di dashboard, render recovery page, kirim notifikasi email\n- **Keamanan**: audit log untuk anti-abuse (siapa akses kontak darurat, kapan)\n- **Komunikasi**: email transaksional (laporan penemu, reset password) — tidak ada marketing spam\n- **Improvement**: anonymous aggregate metrics (jumlah scan, success rate reunion) untuk improve produk\n\nKami **tidak** akan:\n- Jual atau sewa data kamu\n- Bagi data ke advertiser\n- Pakai data kamu untuk train AI/ML model\n- Akses akun kamu tanpa permission (kecuali emergency support, dengan consent)"
+      },
+      "encryption": {
+        "title": "3. Enkripsi & Keamanan",
+        "content": "Lapisan keamanan Mimoo:\n\n- **At-rest encryption**: Database Supabase pakai AES-256\n- **Application-level encryption**: Kontak darurat (WhatsApp) di-enkripsi di app layer pakai crypto-js sebelum disimpan ke DB. Kalau database leaked, kontak tetap aman.\n- **In-transit**: Semua koneksi pakai HTTPS/TLS 1.3\n- **Password**: Di-hash dengan bcrypt (industry standard)\n- **Row Level Security (RLS)**: User hanya bisa akses data milik sendiri\n- **IP hashing**: IP address di-hash dengan SHA-256 sebelum log\n\nLapisan tambahan saat Lost Mode aktif:\n- Nomor WhatsApp tidak pernah muncul di HTML source\n- Penemu klik tombol → state berubah → kemudian klik lagi untuk buka wa.me link\n- Setiap akses dicatat di `contact_reveals` table dengan IP hash + user agent"
+      },
+      "thirdParty": {
+        "title": "4. Pihak Ketiga",
+        "content": "Mimoo pakai layanan pihak ketiga berikut:\n\n- **Supabase** (database & auth) — data center Singapore (terdekat untuk Indonesia)\n- **Resend** (email notifications) — untuk notifikasi finder report\n- **Google OAuth** (kalau kamu pilih login dengan Google) — untuk auth\n- **Vercel** (hosting) — untuk serve aplikasi web\n\nSemua provider ini punya privacy policy mereka sendiri yang juga melindungi data kamu. Mimoo memilih provider yang punya track record privacy yang kuat."
+      },
+      "yourRights": {
+        "title": "5. Hak-Hak Kamu",
+        "content": "Kamu berhak:\n\n- **Akses**: Lihat semua data Mimoo punya tentang kamu (lewat dashboard)\n- **Edit**: Update profile, avatar, item kapan saja\n- **Hapus**: Request hapus akun & semua data (email hello@mimoo.id)\n- **Export**: Request copy semua data kamu dalam format JSON (email kami)\n- **Withdraw**: Berhenti pakai Mimoo kapan saja tanpa konsekuensi\n- **Object**: Tolak processing data tertentu (hubungi kami)\n\nKami akan respon dalam 7 hari kerja."
+      },
+      "cookies": {
+        "title": "6. Cookies & Tracking",
+        "content": "Mimoo pakai cookies hanya untuk:\n\n- **Authentication**: cookie session untuk keep kamu logged in (essential)\n- **Locale preference**: cookie untuk remember bahasa pilihan kamu (essential)\n\nKami **tidak** pakai:\n- Tracking cookies untuk advertising\n- Third-party analytics yang invasive (Google Analytics, Facebook Pixel)\n- Behavior tracking di multi-website"
+      },
+      "children": {
+        "title": "7. Pengguna di Bawah Umur",
+        "content": "Mimoo terbuka untuk semua umur, tapi pengguna di bawah 13 tahun harus dengan supervisi orang tua/wali.\n\nKami tidak secara sadar mengumpulkan data dari anak di bawah 13 tahun tanpa parental consent. Kalau kamu orang tua dan menemukan anak kamu daftar tanpa consent, hubungi kami untuk hapus akun."
+      },
+      "changes": {
+        "title": "8. Perubahan Kebijakan",
+        "content": "Kalau kami update kebijakan privasi, kami akan:\n\n- Update tanggal di header dokumen\n- Kirim email notifikasi untuk perubahan signifikan\n- Tampilkan banner di app untuk 30 hari\n\nKamu bisa selalu re-review dokumen ini di /legal/privacy."
+      },
+      "contact": {
+        "title": "9. Hubungi Kami",
+        "content": "Pertanyaan tentang privacy? Email kami di:\n\n**hello@mimoo.id**\n\nKami balas dalam 24 jam (hari kerja). Untuk request urgent (data breach, dll), tambahkan subject [URGENT-PRIVACY]."
+      }
+    }
+  },
+  "TermsPage": {
+    "title": "Syarat & Ketentuan",
+    "subtitle": "Aturan main pakai Mimoo — ditulis dalam bahasa yang mudah dipahami.",
+    "badge": "Legal",
+    "lastUpdated": "Terakhir diupdate: 1 Januari 2026",
+    "intro": "Dengan menggunakan Mimoo, kamu setuju dengan syarat-syarat berikut. Kami tulis sejelas mungkin biar tidak ada hidden surprise.",
+    "tldr": {
+      "title": "📝 TL;DR (Ringkasan)",
+      "items": [
+        "Mimoo gratis dan tidak ada biaya tersembunyi",
+        "Kamu bertanggung jawab atas item yang kamu daftarkan",
+        "Jangan pakai untuk hal ilegal atau merugikan orang lain",
+        "Kami sediakan service as-is, tidak ada garansi 100% uptime",
+        "Kamu bisa berhenti pakai Mimoo kapan saja",
+        "Bahasa hukum: lihat detail di bawah"
+      ]
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Penerimaan Syarat",
+        "content": "Dengan daftar atau menggunakan Mimoo, kamu menyatakan:\n\n- Berusia minimal 13 tahun (atau dengan persetujuan orang tua)\n- Setuju dengan semua poin di dokumen ini\n- Setuju dengan Kebijakan Privasi kami\n- Akan pakai Mimoo sesuai dengan hukum yang berlaku di Indonesia\n\nKalau kamu tidak setuju, mohon tidak menggunakan Mimoo."
+      },
+      "service": {
+        "title": "2. Tentang Layanan",
+        "content": "Mimoo adalah platform untuk:\n\n- Melindungi barang dengan QR code unik\n- Memfasilitasi pemilik dan penemu untuk reunion\n- Menyediakan recovery page publik per item\n- Notifikasi email saat ada laporan penemu\n\nMimoo **bukan**:\n- Asuransi atau penggantian barang\n- Tracking GPS real-time\n- Insurance company yang akan ganti rugi kalau barang hilang\n- Detective service untuk lacak barang\n\nKami platform untuk memfasilitasi reunion — barang yang kembali tergantung pada penemu yang baik hati."
+      },
+      "account": {
+        "title": "3. Akun Pengguna",
+        "content": "Kamu bertanggung jawab untuk:\n\n- Jaga kerahasiaan password\n- Akurasi info yang kamu berikan\n- Aktivitas yang terjadi di akun kamu\n- Notify kami segera kalau ada unauthorized access\n\nKami berhak suspend atau hapus akun yang:\n- Melanggar terms ini\n- Pakai Mimoo untuk hal ilegal\n- Spam atau abuse terhadap user lain\n- Inactive selama lebih dari 2 tahun"
+      },
+      "userContent": {
+        "title": "4. Konten Pengguna",
+        "content": "Kamu retain ownership atas konten yang kamu upload (nama item, custom message, dll). Dengan upload, kamu kasih Mimoo lisensi untuk:\n\n- Display konten kamu di recovery page\n- Cache & serve konten untuk performance\n- Backup untuk disaster recovery\n\nKamu **tidak boleh** upload konten yang:\n- Melanggar hukum Indonesia\n- Berisi hate speech, SARA, atau diskriminasi\n- Berisi info kontak orang lain tanpa consent\n- Promosi produk/service tidak terkait\n- Spam atau scam\n\nKami berhak menghapus konten yang melanggar tanpa peringatan."
+      },
+      "lostMode": {
+        "title": "5. Lost Mode & Kontak Darurat",
+        "content": "Saat aktifkan Lost Mode, kamu setuju:\n\n- Nomor WhatsApp/kontak akan visible ke penemu (lewat reveal button)\n- Reward yang dijanjikan adalah kewajiban kamu (kalau tidak dipenuhi, finder bisa report)\n- Bertanggung jawab kalau ada miscommunication dengan penemu\n- Tidak akan abuse finder yang bertindak baik\n\nKalau kamu owner dari item yang lost, please be kind kepada finder yang sudah luangkan waktu untuk bantu."
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual Property",
+        "content": "Mimoo (brand, logo, design, code) adalah milik kami. Karakter Mimoo (Denpa, Jaya, Salma, Kupa, dll) adalah original creation kami.\n\nKamu **boleh**:\n- Share link Mimoo ke teman/family\n- Mention Mimoo di review/social media\n- Pakai screenshot Mimoo untuk testimonial\n\nKamu **tidak boleh**:\n- Copy design Mimoo untuk produk serupa\n- Pakai logo/karakter Mimoo untuk komersial tanpa izin\n- Reverse engineer code Mimoo"
+      },
+      "disclaimer": {
+        "title": "7. Disclaimer Layanan",
+        "content": "Mimoo disediakan **as-is**. Kami tidak menjamin:\n\n- 100% uptime (target kami 99.9%)\n- Setiap barang hilang akan ditemukan\n- Setiap penemu akan jujur dan menghubungi pemilik\n- Email notifications selalu sampai (tergantung provider)\n\nKami tidak bertanggung jawab atas:\n- Kerugian akibat barang yang tidak kembali\n- Tindakan finder yang merugikan\n- Penipuan yang melibatkan reward\n- Loss of data karena bencana (tapi kami selalu backup)\n\nKami selalu berusaha terbaik, tapi mohon dipahami batasan layanan kami."
+      },
+      "termination": {
+        "title": "8. Penghentian Layanan",
+        "content": "Kamu bisa berhenti pakai Mimoo kapan saja dengan:\n\n- Hapus akun (request via hello@mimoo.id)\n- Stop pakai aplikasi (data tetap ada sampai dihapus)\n\nKami bisa terminate akun kamu jika:\n- Melanggar terms ini berulang kali\n- Mimoo discontinue layanan (kami akan notify 30 hari sebelumnya & beri export data)\n\nDalam case terminate, kamu berhak request export data sebelumnya."
+      },
+      "changes": {
+        "title": "9. Perubahan Terms",
+        "content": "Kami bisa update terms ini sewaktu-waktu. Untuk perubahan signifikan, kami akan:\n\n- Email notifikasi 30 hari sebelumnya\n- Banner di app\n- Update tanggal di header dokumen\n\nLanjut pakai Mimoo setelah perubahan = setuju dengan terms baru. Kalau tidak setuju, kamu bisa hapus akun."
+      },
+      "law": {
+        "title": "10. Hukum yang Berlaku",
+        "content": "Terms ini tunduk pada hukum Republik Indonesia.\n\nKalau ada sengketa, kami harap bisa diselesaikan dengan baik-baik via email (hello@mimoo.id). Kalau tidak bisa diselesaikan, sengketa akan diselesaikan di pengadilan negeri Jakarta.\n\nKami berdoa hal ini tidak pernah terjadi 💜"
+      },
+      "contact": {
+        "title": "11. Hubungi Kami",
+        "content": "Pertanyaan tentang terms? Email kami:\n\n**hello@mimoo.id**\n\nKami balas dalam 24 jam (hari kerja)."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Hubungi Kami",
+    "subtitle": "Punya pertanyaan, feedback, atau ide kolaborasi? Kami senang mendengar dari kamu.",
+    "badge": "Kontak",
+    "channels": {
+      "email": {
+        "title": "Email Umum",
+        "description": "Untuk pertanyaan apapun",
+        "value": "hello@mimoo.id",
+        "responseTime": "Respon dalam 24 jam"
+      },
+      "support": {
+        "title": "Bantuan Teknis",
+        "description": "Bug, error, atau kendala pakai Mimoo",
+        "value": "support@mimoo.id",
+        "responseTime": "Respon dalam 12 jam"
+      },
+      "partnership": {
+        "title": "Kerjasama & B2B",
+        "description": "Kantor, sekolah, atau organisasi",
+        "value": "partner@mimoo.id",
+        "responseTime": "Respon dalam 2-3 hari"
+      },
+      "media": {
+        "title": "Press & Media",
+        "description": "Wawancara atau press kit",
+        "value": "press@mimoo.id",
+        "responseTime": "Respon dalam 2-3 hari"
+      }
+    },
+    "form": {
+      "title": "Atau kirim pesan langsung",
+      "description": "Isi form di bawah, kami akan respon ke email kamu.",
+      "name": "Nama",
+      "namePlaceholder": "Nama lengkap kamu",
+      "email": "Email",
+      "emailPlaceholder": "kamu@email.com",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Mau ngobrol tentang apa?",
+      "category": "Kategori",
+      "categoryOptions": {
+        "general": "Pertanyaan Umum",
+        "support": "Bantuan Teknis",
+        "partnership": "Kerjasama",
+        "feedback": "Feedback / Saran",
+        "press": "Press / Media",
+        "other": "Lainnya"
+      },
+      "message": "Pesan",
+      "messagePlaceholder": "Ceritakan kepada kami...",
+      "submit": "Kirim Pesan",
+      "cancel": "Batal",
+      "successTitle": "Pesan terkirim! 💜",
+      "successDesc": "Terima kasih sudah menghubungi kami. Kami akan balas dalam 24 jam.",
+      "errorMessage": "Gagal kirim pesan. Coba email langsung ke hello@mimoo.id ya!"
+    },
+    "social": {
+      "title": "Ikuti Kami",
+      "description": "Update terbaru tentang Mimoo"
+    },
+    "office": {
+      "title": "Kantor Kami",
+      "address": "Jakarta, Indonesia 🇮🇩",
+      "note": "Kami remote-first. Pertemuan offline berdasarkan janji."
+    }
+  },
+  "BlogPage": {
+    "title": "Blog Mimoo",
+    "subtitle": "Cerita reunion, tips melindungi barang berharga, dan update produk.",
+    "badge": "Blog",
+    "noPostsTitle": "Cerita pertama segera hadir",
+    "noPostsDesc": "Kami sedang menyiapkan cerita-cerita inspiratif tentang reunion, tips praktis, dan update Mimoo. Stay tuned!",
+    "subscribeTitle": "Dapatkan cerita pertama",
+    "subscribeDesc": "Subscribe newsletter Mimoo untuk update story & tips (segera tersedia)",
+    "readMore": "Baca selengkapnya →",
+    "categories": {
+      "stories": "Cerita Reunion",
+      "tips": "Tips & Tutorial",
+      "updates": "Update Produk",
+      "culture": "Budaya Mimoo"
+    },
+    "minRead": "menit baca",
+    "postedOn": "Diposting",
+    "by": "oleh"
+  },
+  "CareersPage": {
+    "title": "Bergabung dengan Mimoo",
+    "subtitle": "Bantu kami bangun cozy identity ecosystem untuk Indonesia.",
+    "badge": "Karir",
+    "intro": "Mimoo adalah produk lokal Indonesia yang dibangun dengan hati. Kalau kamu percaya dengan misi kami dan punya skill yang relevan, kami senang ngobrol!",
+    "values": {
+      "title": "Yang Kami Cari",
+      "items": [
+        {
+          "emoji": "🫶",
+          "title": "Hati untuk Indonesia",
+          "desc": "Care tentang masyarakat Indonesia dan ingin bikin produk yang accessible buat semua"
+        },
+        {
+          "emoji": "✨",
+          "title": "Craft & Detail",
+          "desc": "Detail-oriented, peduli sama kualitas, dan suka polish sampai feel right"
+        },
+        {
+          "emoji": "🌱",
+          "title": "Growth Mindset",
+          "desc": "Selalu mau belajar, terima feedback dengan terbuka, dan adapt cepat"
+        },
+        {
+          "emoji": "🤝",
+          "title": "Tim Player",
+          "desc": "Bisa kerja remote, async, dan komunikasi clear lewat tulisan"
+        }
+      ]
+    },
+    "openings": {
+      "title": "Posisi yang Dibuka",
+      "noOpenings": "Saat ini belum ada posisi yang dibuka secara resmi, tapi kami selalu terbuka untuk talent yang relevan."
+    },
+    "perks": {
+      "title": "Kenapa Kerja di Mimoo?",
+      "items": [
+        {
+          "emoji": "🏠",
+          "title": "Remote-First",
+          "desc": "Kerja dari mana saja di Indonesia, atau dunia"
+        },
+        {
+          "emoji": "⏰",
+          "title": "Flexible Hours",
+          "desc": "Async-first, fokus hasil bukan jam kerja"
+        },
+        {
+          "emoji": "📚",
+          "title": "Learning Budget",
+          "desc": "Budget untuk kursus, conference, atau buku"
+        },
+        {
+          "emoji": "🇮🇩",
+          "title": "Impact untuk Indonesia",
+          "desc": "Bantu jutaan orang Indonesia lindungi barangnya"
+        },
+        {
+          "emoji": "💜",
+          "title": "Cozy Team Culture",
+          "desc": "No politics, no toxic vibes, fokus build produk yang bermakna"
+        },
+        {
+          "emoji": "🌱",
+          "title": "Growth Together",
+          "desc": "Mimoo masih early, banyak kesempatan tumbuh bareng"
+        }
+      ]
+    },
+    "openApplication": {
+      "title": "Tidak Lihat Posisi yang Pas?",
+      "description": "Kami selalu terbuka untuk talent yang punya passion dengan misi Mimoo. Kirim email dengan portfolio atau CV kamu, ceritain kenapa kamu interest dengan Mimoo.",
+      "emailLabel": "Email aplikasi:",
+      "email": "careers@mimoo.id",
+      "tipTitle": "💡 Tips:",
+      "tips": [
+        "Tunjukkan work terbaik kamu (bukan template generic)",
+        "Ceritain story personal kenapa Mimoo resonate dengan kamu",
+        "Singkat, padat, dan honest"
+      ]
+    }
   }
 }

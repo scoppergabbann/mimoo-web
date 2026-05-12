@@ -14,7 +14,6 @@ export function Footer() {
         { label: t('links.howItWorks'), href: '/how-it-works' },
         { label: t('links.products'), href: '/products' },
         { label: t('links.pricing'), href: '/pricing' },
-        { label: t('links.shop'), href: '/shop' },
       ],
     },
     {
@@ -36,8 +35,8 @@ export function Footer() {
     {
       title: t('legal'),
       links: [
-        { label: t('links.privacy'), href: '/privacy' },
-        { label: t('links.terms'), href: '/terms' },
+        { label: t('links.privacy'), href: '/legal/privacy' },
+        { label: t('links.terms'), href: '/legal/terms' },
       ],
     },
   ];

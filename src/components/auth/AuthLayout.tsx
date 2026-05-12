@@ -1,42 +1,30 @@
 import type { ReactNode } from 'react';
-import { Link } from '@/i18n/navigation';
-import { MimooLogo } from '@/components/layout/MimooLogo';
 import { MimooBlob } from '@/lib/avatar/MimooBlob';
 
 interface AuthLayoutProps {
   children: ReactNode;
   title: string;
   subtitle?: string;
+  blobExpression?: 'happy' | 'sparkle' | 'love' | 'thoughtful' | 'wink';
   footer?: ReactNode;
-  blobExpression?: 'happy' | 'wink' | 'love' | 'sparkle';
 }
 
 /**
- * Layout shared antara login, register, forgot-password.
- * Style: card-based centered layout dengan illustration.
+ * Layout untuk halaman auth (login, register, forgot, reset).
+ *
+ * Catatan: TIDAK ada header dengan logo di sini.
+ * Navbar global (dari [locale]/layout.tsx) sudah menampilkan logo Mimoo.
  */
 export function AuthLayout({
   children,
   title,
   subtitle,
-  footer,
   blobExpression = 'happy',
+  footer,
 }: AuthLayoutProps) {
   return (
-    <div className="min-h-screen bg-gradient-cozy flex flex-col">
-      {/* Top bar with logo */}
-      <header className="px-4 sm:px-6 lg:px-8 py-6">
-        <Link
-          href="/"
-          className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-mimoo-purple-400 rounded-cozy"
-          aria-label="Mimoo - Beranda"
-        >
-          <MimooLogo size="md" />
-        </Link>
-      </header>
-
-      {/* Main content */}
-      <main className="flex-1 flex items-center justify-center px-4 py-8">
+    <div className="min-h-[calc(100vh-200px)] bg-gradient-cozy flex flex-col">
+      <main className="flex-1 flex items-center justify-center px-4 py-8 lg:py-12">
         <div className="w-full max-w-md">
           {/* Decorative blob mascot */}
           <div className="flex justify-center mb-4">
@@ -54,27 +42,16 @@ export function AuthLayout({
           </div>
 
           {/* Form card */}
-          <div className="bg-white rounded-cozy-lg shadow-soft-lg p-6 sm:p-8">
+          <div className="bg-white rounded-cozy-lg shadow-soft p-6 sm:p-8">
             {children}
           </div>
 
           {/* Footer */}
-          {footer && <div className="mt-6 text-center">{footer}</div>}
+          {footer && (
+            <div className="text-center mt-6">{footer}</div>
+          )}
         </div>
       </main>
-
-      {/* Decorative sparkles */}
-      <div className="fixed inset-0 pointer-events-none -z-10" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-3 h-3 bg-mimoo-purple-300 rounded-full animate-sparkle opacity-60" />
-        <div
-          className="absolute top-40 right-20 w-2 h-2 bg-mimoo-pink-300 rounded-full animate-sparkle opacity-50"
-          style={{ animationDelay: '1s' }}
-        />
-        <div
-          className="absolute bottom-40 left-1/4 w-2 h-2 bg-mimoo-sky-300 rounded-full animate-sparkle opacity-60"
-          style={{ animationDelay: '2s' }}
-        />
-      </div>
     </div>
   );
 }

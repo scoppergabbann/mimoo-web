@@ -10,6 +10,14 @@
     "forCards": "For Cards",
     "pricing": "Pricing",
     "about": "About us",
+    "help": "Help",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "legal": "Legal",
     "login": "Log in",
     "register": "Sign up",
     "dashboard": "Dashboard",
@@ -485,5 +493,403 @@
     "successTitle": "Message sent! 💜",
     "successDesc": "We've notified the owner. You're kind for taking the time to help. May good karma come back to you! 🫶",
     "backHome": "Back to Home"
+  },
+  "HelpPage": {
+    "title": "Help Center",
+    "subtitle": "We're here to help. Pick a topic below or contact us directly.",
+    "badge": "Help",
+    "searchPlaceholder": "Search help...",
+    "categories": {
+      "gettingStarted": {
+        "title": "Getting Started with Mimoo",
+        "description": "How to sign up, pick a character, and create your first item",
+        "emoji": "✨"
+      },
+      "items": {
+        "title": "Managing Items",
+        "description": "Add, edit, and delete your Mimoo-protected belongings",
+        "emoji": "📦"
+      },
+      "qrAndPrint": {
+        "title": "QR Code & Printing",
+        "description": "Generate QR, download PNG, and tips for durable printing",
+        "emoji": "🖨️"
+      },
+      "lostMode": {
+        "title": "Lost Mode",
+        "description": "How to activate, add emergency contact, and set rewards",
+        "emoji": "⚠️"
+      },
+      "privacy": {
+        "title": "Privacy & Security",
+        "description": "How Mimoo protects your data and emergency contacts",
+        "emoji": "🔒"
+      },
+      "billing": {
+        "title": "Donations & Support",
+        "description": "Mimoo is free. How to support us if you want to",
+        "emoji": "💜"
+      }
+    },
+    "contactCta": {
+      "title": "Can't find your answer?",
+      "description": "Mimoo team is ready to help. Send a message and we'll respond within 24 hours.",
+      "button": "Contact Us"
+    }
+  },
+  "FaqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to common questions about Mimoo.",
+    "badge": "FAQ",
+    "stillNeedHelp": "Still need help? Contact us →",
+    "categories": {
+      "general": "General",
+      "account": "Account",
+      "items": "Items & QR",
+      "lostMode": "Lost Mode",
+      "privacy": "Privacy",
+      "billing": "Donations"
+    },
+    "items": {
+      "whatIsMimoo": {
+        "q": "What is Mimoo?",
+        "a": "Mimoo is a cozy platform to protect your valuables with QR codes. If your item is lost and someone finds it, they can scan the QR and contact you directly — all with privacy intact.\n\nMimoo isn't just a utility — we believe losing things is painful, and every reunion is a story worth celebrating. 💜"
+      },
+      "isItFree": {
+        "q": "Is Mimoo really free?",
+        "a": "Yes! Mimoo is 100% free forever. No paid tiers, no hidden limits, no ads.\n\nWe believe protecting what matters should be accessible to all. If Mimoo helps you, you can support us through donations (optional)."
+      },
+      "howToRegister": {
+        "q": "How do I sign up?",
+        "a": "Sign-up is easy:\n1. Click 'Sign up' in the top right\n2. Enter your name, email, and password (or use Google)\n3. Pick your favorite Mimoo character\n4. Done! Create your first item right away"
+      },
+      "forgotPassword": {
+        "q": "I forgot my password, what should I do?",
+        "a": "Click 'Forgot Password?' on the login page, enter your email, and we'll send a magic link to reset. Check your inbox in 1-2 minutes."
+      },
+      "deleteAccount": {
+        "q": "Can I delete my account?",
+        "a": "Yes! For now, contact us at hello@mimoo.id to request account deletion. All your data (items, reports, profile) will be permanently deleted within 30 days.\n\nWe'll add a self-service button in the dashboard soon."
+      },
+      "itemLimit": {
+        "q": "What's the max items I can create?",
+        "a": "No limit! Create as many items as you need, free. Want to protect all your IDs, wallets, bags, laptops? Go ahead!"
+      },
+      "qrPrint": {
+        "q": "How do I print the QR code?",
+        "a": "1. Open your item detail in dashboard\n2. Click 'Download QR (PNG)' — file downloads\n3. Print from your computer or phone\n\nTips: For best results, print on sticker paper (stationery store) or stick to durable plastic card. Mimoo is planning quality physical cards — stay tuned!"
+      },
+      "scanCount": {
+        "q": "Why is my scan count rising even with no reports?",
+        "a": "Scan count increases every time someone opens your item's recovery URL. This can happen because:\n- Someone scanned the QR but didn't send a message\n- Search engine bots (rare, our URLs aren't indexed)\n- You yourself opening the URL to test\n\nThis is normal and actually good — it means your QR is visible & active."
+      },
+      "lostModeWhat": {
+        "q": "What is Lost Mode?",
+        "a": "Lost Mode is a toggle on each item to mark that the item is currently lost. When active:\n- Recovery page becomes more urgent (pink color, ⚠️ banner)\n- Emergency contact (WhatsApp) appears for the finder to reach you directly\n- You can offer a reward (optional)\n- Every contact access is logged for anti-abuse"
+      },
+      "whatsappPrivacy": {
+        "q": "Is my WhatsApp number safe?",
+        "a": "Very safe! We use 3 layers of protection:\n1. Number is AES-encrypted in database (not plaintext)\n2. Never appears in HTML source — only shown when finder clicks 'Chat via WhatsApp'\n3. Every access is logged (IP hashed, not raw) for anti-abuse audit"
+      },
+      "dataPrivacy": {
+        "q": "How does Mimoo protect my data?",
+        "a": "Privacy is Mimoo's core value:\n- Email & password stored securely in Supabase (industry-standard)\n- Emergency contacts AES-encrypted\n- IP addresses hashed, not raw (audit log)\n- Recovery URLs not indexed by Google\n- Profile only shows name + avatar (no email/phone)\n- No tracking pixels or invasive third-party analytics"
+      },
+      "donation": {
+        "q": "How can I support Mimoo?",
+        "a": "If Mimoo helps you, you can:\n- Donate via Trakteer/Saweria (coming soon)\n- Share Mimoo with friends & family\n- Send feedback to hello@mimoo.id\n- Buy a Mimoo physical card (in planning!)"
+      },
+      "businessUse": {
+        "q": "Can Mimoo be used for offices/schools?",
+        "a": "Mimoo is currently personal-use, but we're planning B2B features (admin panel, bulk items, organization branding). If your office/school is interested, email us at hello@mimoo.id — we'd love to chat!"
+      }
+    }
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "subtitle": "How Mimoo protects your data — explained in human language.",
+    "badge": "Legal",
+    "lastUpdated": "Last updated: January 1, 2026",
+    "intro": "Mimoo is built with privacy as a foundational principle, not a checklist. This document explains what data we collect, how we use it, and your rights as a user.",
+    "tldr": {
+      "title": "💜 TL;DR (Summary)",
+      "items": [
+        "We ask for the minimum data needed",
+        "No ads, no selling data to third parties",
+        "Emergency contacts AES-encrypted in database",
+        "IP addresses hashed before storage (audit)",
+        "You can request account & data deletion anytime",
+        "Recovery URLs not indexed by search engines"
+      ]
+    },
+    "sections": {
+      "dataCollected": {
+        "title": "1. Data We Collect",
+        "content": "When you use Mimoo, we collect:\n\n**At sign-up:**\n- Name (for profile & recovery page display)\n- Email (for login & notifications)\n- Password (hashed, we cannot see it)\n- Avatar character preference\n\n**While using Mimoo:**\n- Items you create (name, category, message, recovery code)\n- Item status (active/lost)\n- Emergency WhatsApp contact (if Lost Mode active) — encrypted\n- Reward description (optional)\n\n**When someone scans your QR:**\n- Finder's message\n- Location (text + optional GPS)\n- Finder info (if they fill it: name, contact)\n- Finder's IP address (hashed, not raw)\n- Browser user agent\n\nWe do **not** collect:\n- Your location when not using Mimoo\n- Your browsing history\n- Contacts on your phone\n- Photos or media without explicit upload"
+      },
+      "howWeUse": {
+        "title": "2. How We Use Data",
+        "content": "Your data is used for:\n\n- **Mimoo operations**: display your items, render recovery page, send email notifications\n- **Security**: audit log for anti-abuse (who accessed emergency contact, when)\n- **Communication**: transactional emails (finder reports, password reset) — no marketing spam\n- **Improvement**: anonymous aggregate metrics (scan counts, reunion success rates) to improve the product\n\nWe will **not**:\n- Sell or rent your data\n- Share data with advertisers\n- Use your data to train AI/ML models\n- Access your account without permission (except emergency support, with consent)"
+      },
+      "encryption": {
+        "title": "3. Encryption & Security",
+        "content": "Mimoo's security layers:\n\n- **At-rest encryption**: Supabase database uses AES-256\n- **Application-level encryption**: Emergency contacts (WhatsApp) AES-encrypted at app layer using crypto-js before saving to DB. If database leaked, contacts remain safe.\n- **In-transit**: All connections use HTTPS/TLS 1.3\n- **Password**: Hashed with bcrypt (industry standard)\n- **Row Level Security (RLS)**: Users can only access their own data\n- **IP hashing**: IP addresses hashed with SHA-256 before logging\n\nExtra layers when Lost Mode is active:\n- WhatsApp number never appears in HTML source\n- Finder clicks button → state changes → click again to open wa.me link\n- Every access logged in `contact_reveals` table with IP hash + user agent"
+      },
+      "thirdParty": {
+        "title": "4. Third Parties",
+        "content": "Mimoo uses these third-party services:\n\n- **Supabase** (database & auth) — Singapore data center (closest to Indonesia)\n- **Resend** (email notifications) — for finder report alerts\n- **Google OAuth** (if you choose Google login) — for authentication\n- **Vercel** (hosting) — to serve the web app\n\nEach provider has their own privacy policy that also protects your data. Mimoo chose providers with strong privacy track records."
+      },
+      "yourRights": {
+        "title": "5. Your Rights",
+        "content": "You have the right to:\n\n- **Access**: View all data Mimoo has about you (via dashboard)\n- **Edit**: Update profile, avatar, items anytime\n- **Delete**: Request account & data deletion (email hello@mimoo.id)\n- **Export**: Request a copy of all your data in JSON (email us)\n- **Withdraw**: Stop using Mimoo anytime, no consequences\n- **Object**: Refuse certain data processing (contact us)\n\nWe respond within 7 business days."
+      },
+      "cookies": {
+        "title": "6. Cookies & Tracking",
+        "content": "Mimoo uses cookies only for:\n\n- **Authentication**: session cookie to keep you logged in (essential)\n- **Locale preference**: cookie to remember your language choice (essential)\n\nWe do **not** use:\n- Tracking cookies for advertising\n- Invasive third-party analytics (Google Analytics, Facebook Pixel)\n- Behavioral tracking across multiple sites"
+      },
+      "children": {
+        "title": "7. Underage Users",
+        "content": "Mimoo is open to all ages, but users under 13 must have parental supervision.\n\nWe don't knowingly collect data from children under 13 without parental consent. If you're a parent and find your child has signed up without consent, contact us to delete the account."
+      },
+      "changes": {
+        "title": "8. Policy Changes",
+        "content": "If we update the privacy policy, we will:\n\n- Update the date at the document header\n- Send email notification for significant changes\n- Show a banner in the app for 30 days\n\nYou can always re-review this document at /legal/privacy."
+      },
+      "contact": {
+        "title": "9. Contact Us",
+        "content": "Privacy questions? Email us at:\n\n**hello@mimoo.id**\n\nWe respond within 24 hours (business days). For urgent requests (data breach, etc.), prefix subject with [URGENT-PRIVACY]."
+      }
+    }
+  },
+  "TermsPage": {
+    "title": "Terms of Service",
+    "subtitle": "Rules for using Mimoo — written in language you can actually understand.",
+    "badge": "Legal",
+    "lastUpdated": "Last updated: January 1, 2026",
+    "intro": "By using Mimoo, you agree to the following terms. We've written them as clearly as possible so there are no hidden surprises.",
+    "tldr": {
+      "title": "📝 TL;DR (Summary)",
+      "items": [
+        "Mimoo is free with no hidden fees",
+        "You're responsible for items you register",
+        "Don't use it for illegal or harmful things",
+        "We provide service as-is, no 100% uptime guarantee",
+        "You can stop using Mimoo anytime",
+        "Legal language: see details below"
+      ]
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By registering or using Mimoo, you confirm:\n\n- You are at least 13 years old (or have parental consent)\n- You agree to all points in this document\n- You agree to our Privacy Policy\n- You will use Mimoo in compliance with Indonesian law\n\nIf you don't agree, please don't use Mimoo."
+      },
+      "service": {
+        "title": "2. About the Service",
+        "content": "Mimoo is a platform for:\n\n- Protecting items with unique QR codes\n- Facilitating reunions between owners and finders\n- Providing public recovery pages per item\n- Email notifications for finder reports\n\nMimoo is **not**:\n- Insurance or item replacement\n- Real-time GPS tracking\n- An insurance company that will compensate lost items\n- A detective service to locate items\n\nWe are a platform that facilitates reunions — items returning depends on kind-hearted finders."
+      },
+      "account": {
+        "title": "3. User Account",
+        "content": "You are responsible for:\n\n- Keeping your password confidential\n- Accuracy of information you provide\n- Activities that happen on your account\n- Notifying us immediately of unauthorized access\n\nWe reserve the right to suspend or delete accounts that:\n- Violate these terms\n- Use Mimoo for illegal purposes\n- Spam or abuse other users\n- Inactive for more than 2 years"
+      },
+      "userContent": {
+        "title": "4. User Content",
+        "content": "You retain ownership of content you upload (item names, custom messages, etc.). By uploading, you grant Mimoo a license to:\n\n- Display your content on recovery pages\n- Cache & serve content for performance\n- Backup for disaster recovery\n\nYou **may not** upload content that:\n- Violates Indonesian law\n- Contains hate speech, racism, or discrimination\n- Includes other people's contact info without consent\n- Promotes unrelated products/services\n- Is spam or scam\n\nWe reserve the right to remove violating content without notice."
+      },
+      "lostMode": {
+        "title": "5. Lost Mode & Emergency Contact",
+        "content": "When activating Lost Mode, you agree:\n\n- Your WhatsApp/contact will be visible to finders (via reveal button)\n- Promised rewards are your obligation (if unfulfilled, finder can report)\n- You are responsible for miscommunication with finders\n- You won't abuse finders who act in good faith\n\nIf you're the owner of a lost item, please be kind to finders who took time to help."
+      },
+      "intellectualProperty": {
+        "title": "6. Intellectual Property",
+        "content": "Mimoo (brand, logo, design, code) is ours. Mimoo characters (Denpa, Jaya, Salma, Kupa, etc.) are our original creations.\n\nYou **may**:\n- Share Mimoo links with friends/family\n- Mention Mimoo in reviews/social media\n- Use Mimoo screenshots for testimonials\n\nYou **may not**:\n- Copy Mimoo's design for similar products\n- Use Mimoo logo/characters commercially without permission\n- Reverse engineer Mimoo code"
+      },
+      "disclaimer": {
+        "title": "7. Service Disclaimer",
+        "content": "Mimoo is provided **as-is**. We don't guarantee:\n\n- 100% uptime (our target is 99.9%)\n- Every lost item will be found\n- Every finder will be honest and contact the owner\n- Email notifications always deliver (depends on providers)\n\nWe are not liable for:\n- Losses from items not returning\n- Finder actions that harm you\n- Reward-related fraud\n- Data loss from disasters (but we always backup)\n\nWe always try our best, but please understand the service limitations."
+      },
+      "termination": {
+        "title": "8. Service Termination",
+        "content": "You can stop using Mimoo anytime by:\n\n- Deleting your account (request via hello@mimoo.id)\n- Stopping use of the app (data persists until deleted)\n\nWe can terminate your account if:\n- You repeatedly violate these terms\n- Mimoo discontinues service (we'll notify 30 days in advance & give data export)\n\nIn termination cases, you have the right to request data export beforehand."
+      },
+      "changes": {
+        "title": "9. Terms Changes",
+        "content": "We may update these terms at any time. For significant changes, we will:\n\n- Email notification 30 days in advance\n- Banner in the app\n- Update date at document header\n\nContinuing to use Mimoo after changes = agreement with new terms. If you don't agree, you can delete your account."
+      },
+      "law": {
+        "title": "10. Governing Law",
+        "content": "These terms are governed by the laws of the Republic of Indonesia.\n\nIf there's a dispute, we hope it can be resolved amicably via email (hello@mimoo.id). If not, disputes will be resolved at the Jakarta district court.\n\nWe pray this never happens 💜"
+      },
+      "contact": {
+        "title": "11. Contact Us",
+        "content": "Questions about terms? Email us:\n\n**hello@mimoo.id**\n\nWe respond within 24 hours (business days)."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "subtitle": "Have questions, feedback, or collaboration ideas? We'd love to hear from you.",
+    "badge": "Contact",
+    "channels": {
+      "email": {
+        "title": "General Email",
+        "description": "For any questions",
+        "value": "hello@mimoo.id",
+        "responseTime": "Response within 24 hours"
+      },
+      "support": {
+        "title": "Technical Support",
+        "description": "Bugs, errors, or trouble using Mimoo",
+        "value": "support@mimoo.id",
+        "responseTime": "Response within 12 hours"
+      },
+      "partnership": {
+        "title": "Partnership & B2B",
+        "description": "Offices, schools, or organizations",
+        "value": "partner@mimoo.id",
+        "responseTime": "Response within 2-3 days"
+      },
+      "media": {
+        "title": "Press & Media",
+        "description": "Interviews or press kits",
+        "value": "press@mimoo.id",
+        "responseTime": "Response within 2-3 days"
+      }
+    },
+    "form": {
+      "title": "Or send a direct message",
+      "description": "Fill the form below, we'll respond to your email.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What would you like to chat about?",
+      "category": "Category",
+      "categoryOptions": {
+        "general": "General Question",
+        "support": "Technical Support",
+        "partnership": "Partnership",
+        "feedback": "Feedback / Suggestion",
+        "press": "Press / Media",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us...",
+      "submit": "Send Message",
+      "cancel": "Cancel",
+      "successTitle": "Message sent! 💜",
+      "successDesc": "Thank you for contacting us. We'll respond within 24 hours.",
+      "errorMessage": "Failed to send message. Please email hello@mimoo.id directly!"
+    },
+    "social": {
+      "title": "Follow Us",
+      "description": "Latest Mimoo updates"
+    },
+    "office": {
+      "title": "Our Office",
+      "address": "Jakarta, Indonesia 🇮🇩",
+      "note": "We're remote-first. Offline meetings by appointment."
+    }
+  },
+  "BlogPage": {
+    "title": "Mimoo Blog",
+    "subtitle": "Reunion stories, tips for protecting your valuables, and product updates.",
+    "badge": "Blog",
+    "noPostsTitle": "First story coming soon",
+    "noPostsDesc": "We're preparing inspiring stories about reunions, practical tips, and Mimoo updates. Stay tuned!",
+    "subscribeTitle": "Get the first story",
+    "subscribeDesc": "Subscribe to Mimoo newsletter for story & tip updates (coming soon)",
+    "readMore": "Read more →",
+    "categories": {
+      "stories": "Reunion Stories",
+      "tips": "Tips & Tutorials",
+      "updates": "Product Updates",
+      "culture": "Mimoo Culture"
+    },
+    "minRead": "min read",
+    "postedOn": "Posted on",
+    "by": "by"
+  },
+  "CareersPage": {
+    "title": "Join Mimoo",
+    "subtitle": "Help us build a cozy identity ecosystem for Indonesia.",
+    "badge": "Careers",
+    "intro": "Mimoo is a local Indonesian product built with heart. If you believe in our mission and have relevant skills, we'd love to chat!",
+    "values": {
+      "title": "What We Look For",
+      "items": [
+        {
+          "emoji": "🫶",
+          "title": "Heart for Indonesia",
+          "desc": "Care about Indonesian society and want to make products accessible for all"
+        },
+        {
+          "emoji": "✨",
+          "title": "Craft & Detail",
+          "desc": "Detail-oriented, care about quality, love to polish until it feels right"
+        },
+        {
+          "emoji": "🌱",
+          "title": "Growth Mindset",
+          "desc": "Always learning, receive feedback openly, and adapt quickly"
+        },
+        {
+          "emoji": "🤝",
+          "title": "Team Player",
+          "desc": "Can work remote, async, and communicate clearly in writing"
+        }
+      ]
+    },
+    "openings": {
+      "title": "Open Positions",
+      "noOpenings": "We currently don't have formally open positions, but we're always open to relevant talent."
+    },
+    "perks": {
+      "title": "Why Work at Mimoo?",
+      "items": [
+        {
+          "emoji": "🏠",
+          "title": "Remote-First",
+          "desc": "Work from anywhere in Indonesia, or the world"
+        },
+        {
+          "emoji": "⏰",
+          "title": "Flexible Hours",
+          "desc": "Async-first, focus on results not hours"
+        },
+        {
+          "emoji": "📚",
+          "title": "Learning Budget",
+          "desc": "Budget for courses, conferences, or books"
+        },
+        {
+          "emoji": "🇮🇩",
+          "title": "Impact for Indonesia",
+          "desc": "Help millions of Indonesians protect their belongings"
+        },
+        {
+          "emoji": "💜",
+          "title": "Cozy Team Culture",
+          "desc": "No politics, no toxic vibes, focus on building meaningful products"
+        },
+        {
+          "emoji": "🌱",
+          "title": "Growth Together",
+          "desc": "Mimoo is still early, many chances to grow together"
+        }
+      ]
+    },
+    "openApplication": {
+      "title": "Don't See a Fitting Position?",
+      "description": "We're always open to talent who has passion for Mimoo's mission. Send an email with your portfolio or CV, tell us why you're interested in Mimoo.",
+      "emailLabel": "Application email:",
+      "email": "careers@mimoo.id",
+      "tipTitle": "💡 Tips:",
+      "tips": [
+        "Show your best work (not generic templates)",
+        "Tell a personal story why Mimoo resonates with you",
+        "Be brief, focused, and honest"
+      ]
+    }
   }
 }

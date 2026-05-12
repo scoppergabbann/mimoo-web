@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 interface MimooBlobProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  expression?: 'happy' | 'wink' | 'love' | 'sparkle';
+  expression?: 'happy' | 'wink' | 'love' | 'sparkle' | 'thoughtful';
   animated?: boolean;
 }
 
@@ -90,6 +90,18 @@ export function MimooBlob({
           <>
             <path d="M 45 50 L 47 55 L 45 60 L 43 55 Z" fill="#FFD96B" />
             <path d="M 75 50 L 77 55 L 75 60 L 73 55 Z" fill="#FFD96B" />
+          </>
+        )}
+        {expression === 'thoughtful' && (
+          <>
+            {/* Eyes looking up-side (curious/contemplative) */}
+            <ellipse cx="44" cy="56" rx="3.5" ry="4.5" fill="#1A1A2E" />
+            <ellipse cx="74" cy="56" rx="3.5" ry="4.5" fill="#1A1A2E" />
+            <circle cx="46" cy="54" r="1" fill="#FFFDF8" />
+            <circle cx="76" cy="54" r="1" fill="#FFFDF8" />
+            {/* Small eyebrows raised slightly */}
+            <path d="M 40 47 Q 45 45 50 47" stroke="#1A1A2E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+            <path d="M 70 47 Q 75 45 80 47" stroke="#1A1A2E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
           </>
         )}
 
