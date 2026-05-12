@@ -161,6 +161,14 @@ export function NavbarClient({ user }: NavbarClientProps) {
                       >
                         {t('dashboard')}
                       </Link>
+                      <Link
+                        href="/dashboard/avatar"
+                        role="menuitem"
+                        onClick={() => setIsUserMenuOpen(false)}
+                        className="block px-4 py-2.5 text-sm font-medium text-mimoo-ink-700 hover:bg-mimoo-purple-50 transition-colors"
+                      >
+                        ✨ {t('customizeAvatar')}
+                      </Link>
                       <button
                         type="button"
                         role="menuitem"

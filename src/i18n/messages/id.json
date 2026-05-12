@@ -13,6 +13,7 @@
     "login": "Masuk",
     "register": "Daftar",
     "dashboard": "Dashboard",
+    "customizeAvatar": "Ubah Avatar",
     "logout": "Keluar",
     "getStarted": "Mulai Sekarang",
     "new": "Baru"
@@ -326,6 +327,22 @@
       "subtitle": "Sepertinya ada masalah saat sign-in. Coba lagi ya!",
       "tryAgain": "Coba Lagi"
     }
+  },
+  "AvatarCustomizer": {
+    "back": "Kembali ke Dashboard",
+    "title": "Ubah Tampilan Mimoo-mu ✨",
+    "subtitle": "Pilih karakter, warna kulit, dan outfit favoritmu. Avatar ini muncul di Mimoo Card dan recovery page.",
+    "pickCharacter": "Pilih Karakter",
+    "pickCharacterHelper": "4 karakter Indonesia tersedia sekarang, 8 lagi segera hadir!",
+    "comingSoon": "Segera Hadir",
+    "skinTone": "Warna Kulit",
+    "outfitColor": "Warna Outfit",
+    "accentColor": "Warna Aksen",
+    "preview": "Preview",
+    "save": "Simpan",
+    "cancel": "Batalkan",
+    "saved": "Tersimpan!",
+    "saveError": "Gagal menyimpan. Coba lagi ya!"
   },
   "Dashboard": {
     "greeting": "Halo, {name}! 👋",

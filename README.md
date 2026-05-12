@@ -207,13 +207,27 @@ Mimoo menggunakan **AES encryption** (via crypto-js) untuk:
 ### Step 4: Configure Email Templates (Optional)
 Supabase Dashboard → **Authentication → Email Templates** → customize sesuai brand Mimoo.
 
-### Step 5: Test!
+### Step 5: Setup Email Notifications via Resend (Phase 4)
+Notifikasi email ke owner saat ada finder report.
+
+1. Sign up gratis di [resend.com](https://resend.com)
+2. Verify domain (atau pakai `onboarding@resend.dev` untuk testing — cuma bisa kirim ke email akun Resend kamu)
+3. Dashboard → **API Keys → Create** → copy
+4. Paste ke `RESEND_API_KEY` di `.env.local`
+5. Done! Email akan terkirim otomatis saat ada finder report
+
+> **Catatan:** Kalau `RESEND_API_KEY` kosong, fitur email di-skip gracefully (gak error). Cocok untuk dev tanpa setup Resend dulu.
+
+### Step 6: Test!
 ```bash
 npm run dev
 ```
 - `/register` → daftar akun baru
 - `/login` → masuk
 - `/dashboard` → protected route
+- `/dashboard/avatar` → customize avatar
+- `/dashboard/items/new` → buat item baru
+- Scan QR atau buka `/found/<code>` → public recovery page
 
 ---
 
@@ -249,14 +263,20 @@ npm run dev
 - ✅ Reward system (optional, owner-defined)
 - ✅ Donation-based model (no paywall, free forever)
 
-### 🚧 Phase 4 — Notifications & Mobile App
-- Email notifications (finder report → owner)
-- Avatar customizer page (12 karakter)
+### ✅ Phase 4 — Notifications & Personalization
+- ✅ Email notifications (finder report → owner via Resend)
+- ✅ Avatar customizer page (character + skin tone + outfit + accent)
+- ✅ Real-time preview with sticky card
+- ✅ Bilingual email templates (cozy Mimoo HTML)
+- ✅ Graceful no-op if Resend key not set (dev-friendly)
+
+### 🚧 Phase 5 — Mobile App
 - React Native mobile app
 - Push notifications
 - NFC support
+- Offline-first
 
-### 🔮 Phase 5 — Community & Growth
+### 🔮 Phase 6 — Community & Growth
 - Public "good karma" leaderboard (optional opt-in)
 - Reward fulfillment workflow
 - Donation page (Trakteer/Saweria integration)

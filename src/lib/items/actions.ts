@@ -231,10 +231,10 @@ export async function submitFinderReportAction(
 
   const supabase = await createClient();
 
-  // Get item by recovery code
+  // Get item info (id, name, owner) by recovery code
   const { data: item, error: itemError } = await supabase
     .from('items')
-    .select('id')
+    .select('id, name, owner_id')
     .eq('recovery_code', recoveryCode.toUpperCase())
     .maybeSingle();
 
@@ -268,7 +268,70 @@ export async function submitFinderReportAction(
     return { error: 'Gagal kirim laporan. Coba lagi ya!' };
   }
 
+  // 📧 Fire-and-forget email notification (don't block response)
+  void notifyOwnerOfReport({
+    ownerId: item.owner_id,
+    itemId: item.id,
+    itemName: item.name,
+    report: parsed.data,
+  });
+
   return { success: true };
+}
+
+/**
+ * Helper: lookup owner profile + email, then send notification.
+ * Runs async — failures don't affect the finder UX.
+ */
+async function notifyOwnerOfReport(params: {
+  ownerId: string;
+  itemId: string;
+  itemName: string;
+  report: {
+    message: string;
+    location_text: string;
+    location_lat?: number | null;
+    location_lng?: number | null;
+    finder_name?: string;
+    finder_contact?: string;
+  };
+}): Promise<void> {
+  try {
+    const supabase = await createClient();
+
+    // Get owner profile (name + locale)
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('name, email, locale')
+      .eq('id', params.ownerId)
+      .maybeSingle();
+
+    if (!profile?.email) {
+      console.warn('[email] No email found for owner', params.ownerId);
+      return;
+    }
+
+    const { sendFinderReportEmail } = await import('@/lib/email/notifications');
+
+    await sendFinderReportEmail({
+      ownerEmail: profile.email,
+      ownerName: profile.name || 'Sahabat Mimoo',
+      ownerLocale: profile.locale === 'en' ? 'en' : 'id',
+      itemId: params.itemId,
+      itemName: params.itemName,
+      report: {
+        message: params.report.message,
+        location_text: params.report.location_text,
+        location_lat: params.report.location_lat ?? null,
+        location_lng: params.report.location_lng ?? null,
+        finder_name: params.report.finder_name || null,
+        finder_contact: params.report.finder_contact || null,
+      },
+    });
+  } catch (error) {
+    // Email failures are non-fatal
+    console.error('[email] notifyOwnerOfReport failed:', error);
+  }
 }
 
 // =================================================================

@@ -42,9 +42,21 @@ export default async function DashboardPage({
         {/* Header card */}
         <div className="bg-white rounded-cozy-lg shadow-soft p-6 lg:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <div className="shrink-0">
-              <MimooAvatar config={avatarConfig} size="lg" withFrame />
-            </div>
+            <Link
+              href="/dashboard/avatar"
+              className="shrink-0 group focus:outline-none focus-visible:ring-4 focus-visible:ring-mimoo-purple-100 rounded-full transition-transform motion-safe:hover:scale-105"
+              aria-label="Ubah avatar"
+            >
+              <div className="relative">
+                <MimooAvatar config={avatarConfig} size="lg" withFrame />
+                <span
+                  className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-mimoo-purple-500 text-white text-sm flex items-center justify-center shadow-soft group-hover:bg-mimoo-purple-700 transition-colors"
+                  aria-hidden="true"
+                >
+                  ✏️
+                </span>
+              </div>
+            </Link>
             <div className="flex-1">
               <h1 className="font-display text-2xl lg:text-3xl font-extrabold text-mimoo-ink-900 mb-1">
                 {t('greeting', { name: displayName })}

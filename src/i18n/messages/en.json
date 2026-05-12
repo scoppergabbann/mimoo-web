@@ -13,6 +13,7 @@
     "login": "Log in",
     "register": "Sign up",
     "dashboard": "Dashboard",
+    "customizeAvatar": "Customize Avatar",
     "logout": "Log out",
     "getStarted": "Get Started",
     "new": "New"
@@ -326,6 +327,22 @@
       "subtitle": "There was an issue signing you in. Please try again!",
       "tryAgain": "Try Again"
     }
+  },
+  "AvatarCustomizer": {
+    "back": "Back to Dashboard",
+    "title": "Customize Your Mimoo ✨",
+    "subtitle": "Pick your favorite character, skin tone, and outfit. Your avatar appears on your Mimoo Card and recovery pages.",
+    "pickCharacter": "Pick Your Character",
+    "pickCharacterHelper": "4 Indonesian characters available now, 8 more coming soon!",
+    "comingSoon": "Coming Soon",
+    "skinTone": "Skin Tone",
+    "outfitColor": "Outfit Color",
+    "accentColor": "Accent Color",
+    "preview": "Preview",
+    "save": "Save",
+    "cancel": "Cancel",
+    "saved": "Saved!",
+    "saveError": "Failed to save. Please try again!"
   },
   "Dashboard": {
     "greeting": "Hello, {name}! 👋",
