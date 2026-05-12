@@ -1,4 +1,3 @@
-import { Link } from '@/i18n/navigation';
 import { MimooLogo } from '@/components/layout/MimooLogo';
 import { MimooBlob } from '@/lib/avatar/MimooBlob';
 import { MimooAvatar } from '@/lib/avatar/MimooAvatar';
@@ -59,9 +58,9 @@ export function RecoveryPage({ item, emergencyContact, labels }: RecoveryPagePro
     >
       {/* Top bar */}
       <header className="px-4 sm:px-6 lg:px-8 py-6 max-w-3xl mx-auto w-full">
-        <Link href="/" className="inline-block">
+        <a href="/id" className="inline-block">
           <MimooLogo size="md" />
-        </Link>
+        </a>
       </header>
 
       {/* Main content */}
@@ -150,7 +149,7 @@ export function RecoveryPage({ item, emergencyContact, labels }: RecoveryPagePro
               {labels.thankYou}
             </p>
 
-            <Link href={`/found/${item.recovery_code}/report` as never}>
+            <a href={`/found/${item.recovery_code}/report`}>
               <Button
                 variant="primary"
                 size="lg"
@@ -159,18 +158,18 @@ export function RecoveryPage({ item, emergencyContact, labels }: RecoveryPagePro
               >
                 💌 {labels.foundButton}
               </Button>
-            </Link>
+            </a>
           </Card>
 
           {/* Footer */}
           <footer className="text-center pt-6">
             <p className="text-xs text-mimoo-ink-300 mb-2">{labels.poweredBy}</p>
-            <Link
-              href="/"
+            <a
+              href="/id"
               className="text-sm text-mimoo-purple-700 hover:text-mimoo-purple-900 font-semibold hover:underline"
             >
               {labels.learnMoreAboutMimoo}
-            </Link>
+            </a>
           </footer>
         </div>
       </main>
