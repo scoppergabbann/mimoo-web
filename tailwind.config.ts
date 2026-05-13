@@ -99,6 +99,7 @@ const config: Config = {
         'sparkle': 'sparkle 3s ease-in-out infinite',
         'fade-up': 'fadeUp 0.6s ease-out forwards',
         'fade-in': 'fadeIn 0.4s ease-out forwards',
+        'slide-up': 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'pop': 'pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
         'wave': 'wave 2.5s ease-in-out infinite',
       },
@@ -118,6 +119,10 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px) scale(0.95)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
         },
         pop: {
           '0%': { transform: 'scale(0.8)', opacity: '0' },

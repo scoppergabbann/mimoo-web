@@ -6,6 +6,12 @@ import { headers } from 'next/headers';
 import { createClient } from '@/lib/supabase/server';
 import { encrypt, hash } from '@/lib/crypto';
 import {
+  checkRateLimit,
+  getRateLimitMessage,
+  FINDER_REPORT_LIMIT,
+  CONTACT_REVEAL_LIMIT,
+} from '@/lib/rate-limit';
+import {
   itemSchema,
   lostModeSchema,
   finderReportSchema,
@@ -250,6 +256,12 @@ export async function submitFinderReportAction(
   const ipHash = hash(ipRaw);
   const userAgent = headersList.get('user-agent') || '';
 
+  // 🛡️ Rate limit check (anti-spam)
+  const rateLimit = checkRateLimit(ipHash, FINDER_REPORT_LIMIT);
+  if (!rateLimit.allowed) {
+    return { error: getRateLimitMessage(rateLimit.resetAt) };
+  }
+
   // Submit report
   const { error: reportError } = await supabase.from('finder_reports').insert({
     item_id: item.id,
@@ -384,6 +396,12 @@ export async function logContactRevealAction(
   const ipRaw = forwardedFor.split(',')[0].trim() || realIp || 'unknown';
   const ipHash = hash(ipRaw);
   const userAgent = headersList.get('user-agent') || '';
+
+  // 🛡️ Rate limit check
+  const rateLimit = checkRateLimit(ipHash, CONTACT_REVEAL_LIMIT);
+  if (!rateLimit.allowed) {
+    return { error: getRateLimitMessage(rateLimit.resetAt) };
+  }
 
   await supabase.from('contact_reveals').insert({
     item_id: item.id,

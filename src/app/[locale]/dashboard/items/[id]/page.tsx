@@ -137,7 +137,13 @@ export default async function ItemDetailPage({ params }: ItemDetailPageProps) {
               </div>
             </dl>
 
-            <div className="mt-6 pt-6 border-t border-mimoo-purple-50 flex justify-end">
+            <div className="mt-6 pt-6 border-t border-mimoo-purple-50 flex justify-between items-center gap-3 flex-wrap">
+              <Link
+                href={`/dashboard/items/${item.id}/edit`}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-pill bg-mimoo-purple-50 hover:bg-mimoo-purple-100 text-mimoo-purple-700 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-mimoo-purple-400"
+              >
+                ✏️ {t('edit')}
+              </Link>
               <DeleteItemButton
                 itemId={item.id}
                 labels={{
