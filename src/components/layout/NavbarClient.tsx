@@ -158,6 +158,13 @@ export function NavbarClient({ user }: NavbarClientProps) {
                 {t('dashboard')}
               </Link>
               <Link
+                href="/dashboard/profile"
+                onClick={() => setIsMobileOpen(false)}
+                className="block px-4 py-3 rounded-cozy text-base font-semibold text-mimoo-ink-700 hover:bg-white transition-colors"
+              >
+                👤 {t('profile')}
+              </Link>
+              <Link
                 href="/dashboard/avatar"
                 onClick={() => setIsMobileOpen(false)}
                 className="block px-4 py-3 rounded-cozy text-base font-semibold text-mimoo-ink-700 hover:bg-white transition-colors"
@@ -306,6 +313,14 @@ export function NavbarClient({ user }: NavbarClientProps) {
                           className="block px-4 py-2.5 text-sm font-medium text-mimoo-ink-700 hover:bg-mimoo-purple-50 transition-colors"
                         >
                           {t('dashboard')}
+                        </Link>
+                        <Link
+                          href="/dashboard/profile"
+                          role="menuitem"
+                          onClick={() => setIsUserMenuOpen(false)}
+                          className="block px-4 py-2.5 text-sm font-medium text-mimoo-ink-700 hover:bg-mimoo-purple-50 transition-colors"
+                        >
+                          👤 {t('profile')}
                         </Link>
                         <Link
                           href="/dashboard/avatar"

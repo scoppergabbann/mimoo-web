@@ -10,6 +10,7 @@ import { QRCodeDisplay } from '@/components/items/QRCodeDisplay';
 import { LostModeToggle } from '@/components/items/LostModeToggle';
 import { FinderReportsList } from '@/components/items/FinderReportsList';
 import { DeleteItemButton } from '@/components/items/DeleteItemButton';
+import { PhotoUploader } from '@/components/photos/PhotoUploader';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,6 +35,8 @@ export default async function ItemDetailPage({ params }: ItemDetailPageProps) {
   const t = await getTranslations('ItemDetail');
   const tLost = await getTranslations('LostMode');
   const tReports = await getTranslations('Reports');
+  const tPhotos = await getTranslations('Photos');
+  const tReunion = await getTranslations('Reunion');
 
   const category = getCategoryMeta(item.category);
 
@@ -114,6 +117,24 @@ export default async function ItemDetailPage({ params }: ItemDetailPageProps) {
                 </dd>
               </div>
 
+              {/* Photo uploader */}
+              <div className="pt-3 border-t border-mimoo-purple-50">
+                <PhotoUploader
+                  itemId={item.id}
+                  initialPhotos={item.photo_urls || []}
+                  labels={{
+                    title: tPhotos('title'),
+                    helper: tPhotos('helper'),
+                    addPhoto: tPhotos('addPhoto'),
+                    uploading: tPhotos('uploading'),
+                    remove: tPhotos('remove'),
+                    successToast: tPhotos('successToast'),
+                    errorToast: tPhotos('errorToast'),
+                    maxReached: tPhotos('maxReached'),
+                  }}
+                />
+              </div>
+
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <div>
                   <dt className="text-xs font-semibold text-mimoo-ink-500 uppercase tracking-wider mb-1">
@@ -190,6 +211,7 @@ export default async function ItemDetailPage({ params }: ItemDetailPageProps) {
         {/* Finder Reports */}
         <FinderReportsList
           reports={reports}
+          itemId={item.id}
           labels={{
             title: tReports('title'),
             empty: tReports('empty'),
@@ -204,6 +226,22 @@ export default async function ItemDetailPage({ params }: ItemDetailPageProps) {
             statusSpam: tReports('statusSpam'),
             anonymous: tReports('anonymous'),
             viewOnMap: tReports('viewOnMap'),
+          }}
+          reunionLabels={{
+            title: tReunion('title'),
+            subtitle: tReunion('subtitle'),
+            storyLabel: tReunion('storyLabel'),
+            storyPlaceholder: tReunion('storyPlaceholder'),
+            storyHelper: tReunion('storyHelper'),
+            displayNameLabel: tReunion('displayNameLabel'),
+            displayNamePlaceholder: tReunion('displayNamePlaceholder'),
+            cityLabel: tReunion('cityLabel'),
+            cityPlaceholder: tReunion('cityPlaceholder'),
+            anonymous: tReunion('anonymous'),
+            submit: tReunion('submit'),
+            skip: tReunion('skip'),
+            successToast: tReunion('successToast'),
+            errorToast: tReunion('errorToast'),
           }}
         />
       </div>

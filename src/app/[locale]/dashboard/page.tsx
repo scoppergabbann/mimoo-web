@@ -1,6 +1,11 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { requireAuth, getUserDisplayName, getUserAvatarConfig } from '@/lib/auth/helpers';
+import {
+  requireAuth,
+  getUserDisplayName,
+  getUserAvatarConfig,
+  needsOnboarding,
+} from '@/lib/auth/helpers';
 import { getMyItems, getUnreadReports } from '@/lib/items/queries';
 import { MimooAvatar } from '@/lib/avatar/MimooAvatar';
 import { MimooBlob } from '@/lib/avatar/MimooBlob';
@@ -9,7 +14,9 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { LogoutButton } from '@/components/auth/LogoutButton';
 import { ItemCard } from '@/components/items/ItemCard';
+import { ItemsList } from '@/components/items/ItemsList';
 import { ArrowRightIcon } from '@/components/ui/Icons';
+import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,10 +30,13 @@ export default async function DashboardPage({
 
   const user = await requireAuth(locale as 'id' | 'en');
   const t = await getTranslations('Dashboard');
+  const tOnboard = await getTranslations('Onboarding');
+  const tList = await getTranslations('ItemsList');
 
-  const [items, unreadReports] = await Promise.all([
+  const [items, unreadReports, shouldOnboard] = await Promise.all([
     getMyItems(),
     getUnreadReports(),
+    needsOnboarding(user.id),
   ]);
 
   const displayName = getUserDisplayName(user);
@@ -38,7 +48,35 @@ export default async function DashboardPage({
 
   return (
     <div className="min-h-[calc(100vh-200px)] py-8 lg:py-12 bg-gradient-cozy">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      {/* Onboarding modal — shown only for first-time users */}
+      {shouldOnboard && (
+        <OnboardingModal
+          userName={displayName}
+          avatarConfig={avatarConfig}
+          labels={{
+            skipButton: tOnboard('skipButton'),
+            nextButton: tOnboard('nextButton'),
+            backButton: tOnboard('backButton'),
+            finishButton: tOnboard('finishButton'),
+            step1: {
+              title: tOnboard('step1.title'),
+              subtitle: tOnboard('step1.subtitle'),
+              welcomeMessage: tOnboard('step1.welcomeMessage'),
+            },
+            step2: {
+              title: tOnboard('step2.title'),
+              subtitle: tOnboard('step2.subtitle'),
+              steps: tOnboard.raw('step2.steps') as { emoji: string; title: string; desc: string }[],
+            },
+            step3: {
+              title: tOnboard('step3.title'),
+              subtitle: tOnboard('step3.subtitle'),
+              primaryCta: tOnboard('step3.primaryCta'),
+              secondaryCta: tOnboard('step3.secondaryCta'),
+            },
+          }}
+        />
+      )}      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         {/* Header card */}
         <div className="bg-white rounded-cozy-lg shadow-soft p-6 lg:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
@@ -146,11 +184,27 @@ export default async function DashboardPage({
                 </Button>
               </Link>
             </div>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {items.map((item) => (
-                <ItemCard key={item.id} item={item} />
-              ))}
-            </div>
+            <ItemsList
+              items={items}
+              labels={{
+                searchPlaceholder: tList('searchPlaceholder'),
+                filterStatus: tList('filterStatus'),
+                filterCategory: tList('filterCategory'),
+                sortBy: tList('sortBy'),
+                statusAll: tList('statusAll'),
+                statusActive: tList('statusActive'),
+                statusLost: tList('statusLost'),
+                sortNewest: tList('sortNewest'),
+                sortOldest: tList('sortOldest'),
+                sortMostScanned: tList('sortMostScanned'),
+                sortMostReported: tList('sortMostReported'),
+                noResults: tList('noResults'),
+                showing: tList('showing'),
+                of: tList('of'),
+                items: tList('items'),
+                clear: tList('clear'),
+              }}
+            />
           </div>
         )}
       </div>

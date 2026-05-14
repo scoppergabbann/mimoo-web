@@ -22,6 +22,7 @@ export interface Item {
   lost_at: string | null;
   scan_count: number;
   report_count: number;
+  photo_urls: string[] | null;
   created_at: string;
   updated_at: string;
 }
@@ -34,6 +35,7 @@ export interface PublicItem {
   category: ItemCategory | null;
   custom_message: string | null;
   is_lost: boolean;
+  photo_urls?: string[] | null;
   // Owner info (limited!)
   owner_name?: string;
   owner_avatar?: {

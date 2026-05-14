@@ -61,3 +61,27 @@ export function getUserAvatarConfig(user: {
     accent: (meta.avatar_accent as AccentColor) || DEFAULT_AVATAR_CONFIG.accent,
   };
 }
+
+/**
+ * Get user's profile from the profiles table.
+ * Returns null if profile doesn't exist yet (rare, but possible).
+ */
+export async function getUserProfile(userId: string) {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from('profiles')
+    .select('*')
+    .eq('id', userId)
+    .maybeSingle();
+  return data;
+}
+
+/**
+ * Check if user needs onboarding.
+ * Returns true if profile.onboarded_at is null.
+ */
+export async function needsOnboarding(userId: string): Promise<boolean> {
+  const profile = await getUserProfile(userId);
+  if (!profile) return false; // Edge case: no profile = don't show onboarding
+  return !profile.onboarded_at;
+}

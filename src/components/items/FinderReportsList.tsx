@@ -1,15 +1,17 @@
 'use client';
 
-import { useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { ReunionModal } from '@/components/reunions/ReunionModal';
 import { updateReportStatusAction } from '@/lib/items/actions';
 import type { FinderReport, ReportStatus } from '@/lib/items/types';
 
 interface FinderReportsListProps {
   reports: FinderReport[];
+  itemId: string;
   labels: {
     title: string;
     empty: string;
@@ -24,6 +26,22 @@ interface FinderReportsListProps {
     statusSpam: string;
     anonymous: string;
     viewOnMap: string;
+  };
+  reunionLabels: {
+    title: string;
+    subtitle: string;
+    storyLabel: string;
+    storyPlaceholder: string;
+    storyHelper: string;
+    displayNameLabel: string;
+    displayNamePlaceholder: string;
+    cityLabel: string;
+    cityPlaceholder: string;
+    anonymous: string;
+    submit: string;
+    skip: string;
+    successToast: string;
+    errorToast: string;
   };
 }
 
@@ -46,11 +64,17 @@ function formatRelativeTime(iso: string, locale: string = 'id'): string {
   });
 }
 
-export function FinderReportsList({ reports, labels }: FinderReportsListProps) {
+export function FinderReportsList({ reports, itemId, labels, reunionLabels }: FinderReportsListProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const [reunionReportId, setReunionReportId] = useState<string | null>(null);
 
   function handleStatusUpdate(reportId: string, status: 'seen' | 'resolved' | 'spam') {
+    if (status === 'resolved') {
+      // Open reunion modal instead of immediate update
+      setReunionReportId(reportId);
+      return;
+    }
     startTransition(async () => {
       await updateReportStatusAction(reportId, status);
       router.refresh();
@@ -180,6 +204,17 @@ export function FinderReportsList({ reports, labels }: FinderReportsListProps) {
           </Card>
         );
       })}
+
+      {/* Reunion celebration modal */}
+      {reunionReportId && (
+        <ReunionModal
+          isOpen={!!reunionReportId}
+          onClose={() => setReunionReportId(null)}
+          itemId={itemId}
+          reportId={reunionReportId}
+          labels={reunionLabels}
+        />
+      )}
     </div>
   );
 }

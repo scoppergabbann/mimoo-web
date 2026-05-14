@@ -21,10 +21,162 @@
     "login": "Log in",
     "register": "Sign up",
     "dashboard": "Dashboard",
+    "profile": "Profile",
     "customizeAvatar": "Customize Avatar",
     "logout": "Log out",
     "getStarted": "Get Started",
     "new": "New"
+  },
+  "Profile": {
+    "back": "Back to Dashboard",
+    "editAvatar": "Edit Avatar",
+    "memberSince": "Member since",
+    "stats": {
+      "title": "Your Stats",
+      "items": "Total Items",
+      "scans": "Total Scans",
+      "reports": "Total Reports",
+      "lost": "Currently Lost"
+    },
+    "form": {
+      "title": "Edit Profile",
+      "subtitle": "Update basic info about you",
+      "name": "Name",
+      "nameHelper": "This name appears on your recovery pages",
+      "namePlaceholder": "Your full name",
+      "locale": "Preferred Language",
+      "localeHelper": "Language for emails & notifications",
+      "localeIdLabel": "Bahasa Indonesia",
+      "localeEnLabel": "English",
+      "save": "Save Changes",
+      "savedToast": "Profile updated successfully! 💜",
+      "errorToast": "Failed to update profile. Please try again!"
+    },
+    "account": {
+      "title": "Account Info",
+      "email": "Email",
+      "signedInWith": "Signed in with",
+      "userId": "User ID"
+    },
+    "danger": {
+      "title": "Danger Zone",
+      "deleteDescription": "Account deletion will permanently remove all your data (items, reports, profile) within 30 days. This action cannot be undone.",
+      "deleteButton": "Request Account Deletion"
+    }
+  },
+  "ItemsList": {
+    "searchPlaceholder": "Search items (name, code, message)...",
+    "filterStatus": "Status",
+    "filterCategory": "All",
+    "sortBy": "Sort by",
+    "statusAll": "All",
+    "statusActive": "Active",
+    "statusLost": "Lost",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first",
+    "sortMostScanned": "Most scanned",
+    "sortMostReported": "Most reported",
+    "noResults": "No items match. Try adjusting filters!",
+    "showing": "Showing",
+    "of": "of",
+    "items": "items",
+    "clear": "Reset Filters"
+  },
+  "Photos": {
+    "title": "Item Photos",
+    "helper": "Add photos to help finders verify",
+    "addPhoto": "Add Photo",
+    "uploading": "Uploading...",
+    "remove": "Remove photo",
+    "successToast": "Photo uploaded successfully! 📸",
+    "errorToast": "Failed to upload photo",
+    "maxReached": "Maximum photo limit reached"
+  },
+  "Reunion": {
+    "title": "Yay, Reunion!",
+    "subtitle": "Your item is back! Want to share your reunion story? Your story can inspire others (optional, we moderate before publishing).",
+    "storyLabel": "Reunion Story",
+    "storyPlaceholder": "Tell us your experience... how it was found, your reaction, anything heartwarming 💜",
+    "storyHelper": "This story may appear on Mimoo landing (after moderation)",
+    "displayNameLabel": "Display Name",
+    "displayNamePlaceholder": "Mimoo User",
+    "cityLabel": "City",
+    "cityPlaceholder": "Jakarta",
+    "anonymous": "Share anonymously (no name)",
+    "submit": "💜 Share Story",
+    "skip": "Skip",
+    "successToast": "Thank you for sharing! 💜",
+    "errorToast": "Story must be at least 10 characters"
+  },
+  "Donate": {
+    "title": "Support Mimoo",
+    "subtitle": "Mimoo is free forever, but running costs (server, email, team time) exist. If Mimoo helps you, your support means a lot.",
+    "badge": "Donate",
+    "comingSoon": "Soon",
+    "why": {
+      "title": "Why Donate?",
+      "description": "We believe protecting what matters should be accessible to all. Your donation helps Mimoo stay free & grow.",
+      "points": {
+        "free": {
+          "title": "Free Forever",
+          "desc": "Donations help us stay free without ads / paid tiers"
+        },
+        "local": {
+          "title": "Local Product",
+          "desc": "Mimoo is built in Indonesia, for Indonesia"
+        },
+        "community": {
+          "title": "Community",
+          "desc": "Every rupiah goes to new features & reunion stories"
+        }
+      }
+    },
+    "tiers": {
+      "title": "Choose What Feels Right",
+      "subtitle": "Every amount is appreciated. Even a cup of coffee means a lot.",
+      "coffee": "Coffee for the dev",
+      "noodle": "Warm noodles for the team",
+      "flower": "Flowers for the founder ☺",
+      "gift": "A month of server + team treat"
+    },
+    "platforms": {
+      "trakteer": {
+        "desc": "Popular Indonesian donation platform",
+        "cta": "Donate via Trakteer"
+      },
+      "saweria": {
+        "desc": "Saweria for Indonesian creators",
+        "cta": "Donate via Saweria"
+      }
+    },
+    "alternative": {
+      "text": "Want to transfer via bank or e-wallet directly?",
+      "cta": "Contact us"
+    },
+    "otherWays": {
+      "title": "Other Ways to Support",
+      "subtitle": "Doesn't have to be money. Many ways to support us.",
+      "share": {
+        "title": "Share with Friends",
+        "desc": "Tell Mimoo to friends, family, or social media"
+      },
+      "feedback": {
+        "title": "Give Feedback",
+        "desc": "Email us at hello@mimoo.id with ideas / critiques"
+      },
+      "review": {
+        "title": "Review Mimoo",
+        "desc": "Write a review on Product Hunt, Twitter, or your blog"
+      },
+      "b2b": {
+        "title": "Adopt at Workplace",
+        "desc": "Recommend Mimoo to your office / school"
+      }
+    },
+    "thankYou": {
+      "title": "Thank You 💜",
+      "quote": "Every support, however small, is a reason we continue building for Indonesia."
+    }
   },
   "Hero": {
     "badge": "Meet Mimoo!",

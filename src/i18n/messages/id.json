@@ -21,10 +21,162 @@
     "login": "Masuk",
     "register": "Daftar",
     "dashboard": "Dashboard",
+    "profile": "Profil",
     "customizeAvatar": "Ubah Avatar",
     "logout": "Keluar",
     "getStarted": "Mulai Sekarang",
     "new": "Baru"
+  },
+  "Profile": {
+    "back": "Kembali ke Dashboard",
+    "editAvatar": "Ubah Avatar",
+    "memberSince": "Bergabung sejak",
+    "stats": {
+      "title": "Statistik Kamu",
+      "items": "Item Total",
+      "scans": "Total Scan",
+      "reports": "Total Laporan",
+      "lost": "Sedang Hilang"
+    },
+    "form": {
+      "title": "Edit Profil",
+      "subtitle": "Update info dasar tentang kamu",
+      "name": "Nama",
+      "nameHelper": "Nama ini muncul di recovery page kamu",
+      "namePlaceholder": "Nama lengkap kamu",
+      "locale": "Bahasa Pilihan",
+      "localeHelper": "Bahasa untuk email & notifikasi",
+      "localeIdLabel": "Bahasa Indonesia",
+      "localeEnLabel": "English",
+      "save": "Simpan Perubahan",
+      "savedToast": "Profil berhasil diupdate! 💜",
+      "errorToast": "Gagal update profil. Coba lagi ya!"
+    },
+    "account": {
+      "title": "Info Akun",
+      "email": "Email",
+      "signedInWith": "Login via",
+      "userId": "User ID"
+    },
+    "danger": {
+      "title": "Zona Bahaya",
+      "deleteDescription": "Hapus akun akan menghapus semua data kamu (item, laporan, profil) secara permanen dalam 30 hari. Aksi ini tidak bisa dibatalkan.",
+      "deleteButton": "Request Hapus Akun"
+    }
+  },
+  "ItemsList": {
+    "searchPlaceholder": "Cari item (nama, kode, pesan)...",
+    "filterStatus": "Status",
+    "filterCategory": "Semua",
+    "sortBy": "Urutkan",
+    "statusAll": "Semua",
+    "statusActive": "Aktif",
+    "statusLost": "Hilang",
+    "sortNewest": "Terbaru",
+    "sortOldest": "Terlama",
+    "sortMostScanned": "Paling sering di-scan",
+    "sortMostReported": "Paling banyak laporan",
+    "noResults": "Tidak ada item yang cocok. Coba ubah filter ya!",
+    "showing": "Menampilkan",
+    "of": "dari",
+    "items": "item",
+    "clear": "Reset Filter"
+  },
+  "Photos": {
+    "title": "Foto Item",
+    "helper": "Tambah foto biar penemu lebih yakin",
+    "addPhoto": "Tambah Foto",
+    "uploading": "Upload...",
+    "remove": "Hapus foto",
+    "successToast": "Foto berhasil diupload! 📸",
+    "errorToast": "Gagal upload foto",
+    "maxReached": "Sudah mencapai batas maksimal foto"
+  },
+  "Reunion": {
+    "title": "Yeay, Reunion!",
+    "subtitle": "Barang kamu kembali! Mau bagi cerita reunion ini? Cerita kamu bisa menginspirasi orang lain (opsional, kami moderasi sebelum publish).",
+    "storyLabel": "Cerita Reunion",
+    "storyPlaceholder": "Ceritain pengalaman kamu... gimana barang ditemukan, ekspresi pas dapet kabar, apapun yang heartwarming 💜",
+    "storyHelper": "Cerita ini bisa muncul di landing Mimoo (setelah moderasi)",
+    "displayNameLabel": "Nama Tampil",
+    "displayNamePlaceholder": "Mimoo User",
+    "cityLabel": "Kota",
+    "cityPlaceholder": "Jakarta",
+    "anonymous": "Share secara anonim (tanpa nama)",
+    "submit": "💜 Bagi Cerita",
+    "skip": "Lewati",
+    "successToast": "Terima kasih sudah berbagi! 💜",
+    "errorToast": "Cerita minimal 10 karakter ya"
+  },
+  "Donate": {
+    "title": "Dukung Mimoo",
+    "subtitle": "Mimoo gratis selamanya, tapi running cost server, email, dan time tim ada juga. Kalau Mimoo bantu kamu, dukungan kamu sangat berarti.",
+    "badge": "Donasi",
+    "comingSoon": "Segera",
+    "why": {
+      "title": "Kenapa Donasi?",
+      "description": "Kami percaya melindungi yang berharga harus bisa diakses semua orang. Donasi kamu bantu Mimoo tetap gratis & berkembang.",
+      "points": {
+        "free": {
+          "title": "Gratis Selamanya",
+          "desc": "Donasi bantu kami tetap gratis tanpa iklan / paid tier"
+        },
+        "local": {
+          "title": "Produk Lokal",
+          "desc": "Mimoo dibangun di Indonesia, untuk Indonesia"
+        },
+        "community": {
+          "title": "Komunitas",
+          "desc": "Setiap rupiah masuk ke fitur baru & cerita reunion"
+        }
+      }
+    },
+    "tiers": {
+      "title": "Pilih Sesuai Hati",
+      "subtitle": "Setiap nominal dihargai. Bahkan secangkir kopi pun berarti banyak.",
+      "coffee": "Secangkir kopi untuk dev",
+      "noodle": "Semangkok mie hangat tim",
+      "flower": "Bunga untuk founder ☺",
+      "gift": "Server sebulan + traktiran tim"
+    },
+    "platforms": {
+      "trakteer": {
+        "desc": "Platform donasi populer Indonesia",
+        "cta": "Donasi via Trakteer"
+      },
+      "saweria": {
+        "desc": "Saweria untuk creator Indonesia",
+        "cta": "Donasi via Saweria"
+      }
+    },
+    "alternative": {
+      "text": "Mau transfer bank atau e-wallet langsung?",
+      "cta": "Hubungi kami"
+    },
+    "otherWays": {
+      "title": "Cara Lain Dukung Mimoo",
+      "subtitle": "Gak harus dengan uang. Ada banyak cara untuk dukung kami.",
+      "share": {
+        "title": "Share ke Teman",
+        "desc": "Cerita Mimoo ke teman, keluarga, atau social media"
+      },
+      "feedback": {
+        "title": "Beri Feedback",
+        "desc": "Email kami di hello@mimoo.id dengan ide / kritik"
+      },
+      "review": {
+        "title": "Review Mimoo",
+        "desc": "Tulis review di Product Hunt, Twitter, atau blog kamu"
+      },
+      "b2b": {
+        "title": "Adopt di Tempat Kerja",
+        "desc": "Rekomendasikan Mimoo ke kantor / sekolah kamu"
+      }
+    },
+    "thankYou": {
+      "title": "Terima Kasih 💜",
+      "quote": "Setiap dukungan, sekecil apapun, menjadi alasan kami terus berkarya untuk Indonesia."
+    }
   },
   "Hero": {
     "badge": "Halo, Mimoo!",
